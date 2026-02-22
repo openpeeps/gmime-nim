@@ -1,14 +1,15 @@
 nimTitle	internet_address	gmime/internet_address.html	module gmime/internet_address		0
-nim	getName	gmime/internet_address.html#getName,ptr.InternetAddress	proc getName(ia: ptr InternetAddress): string		10
-nim	getCharset	gmime/internet_address.html#getCharset,ptr.InternetAddress	proc getCharset(ia: ptr InternetAddress): string		15
-nim	add	gmime/internet_address.html#add,ptr.InternetAddressList,ptr.InternetAddress	proc add(ial: ptr InternetAddressList; ia: ptr InternetAddress): int		23
-nim	prepend	gmime/internet_address.html#prepend,ptr.InternetAddressList,ptr.InternetAddressList	proc prepend(ial, ial2: ptr InternetAddressList)		28
-nim	append	gmime/internet_address.html#append,ptr.InternetAddressList,ptr.InternetAddressList	proc append(ial, ial2: ptr InternetAddressList)		32
-nim	insert	gmime/internet_address.html#insert,ptr.InternetAddressList,ptr.InternetAddress,int	proc insert(ial: ptr InternetAddressList; ia: ptr InternetAddress; index: int)		36
-nim	remove	gmime/internet_address.html#remove,ptr.InternetAddressList,ptr.InternetAddress	proc remove(ial: ptr InternetAddressList; ia: ptr InternetAddress): bool		40
-nim	removeAt	gmime/internet_address.html#removeAt,ptr.InternetAddressList,int	proc removeAt(ial: ptr InternetAddressList; index: int): bool		44
-nim	contains	gmime/internet_address.html#contains,ptr.InternetAddressList,ptr.InternetAddress	proc contains(ial: ptr InternetAddressList; ia: ptr InternetAddress): bool		48
-nim	indexOf	gmime/internet_address.html#indexOf,ptr.InternetAddressList,ptr.InternetAddress	proc indexOf(ial: ptr InternetAddressList; ia: ptr InternetAddress): int		52
-nim	get	gmime/internet_address.html#get,ptr.InternetAddressList,int	proc get(ial: ptr InternetAddressList; index: int): ptr InternetAddress		56
-nim	put	gmime/internet_address.html#put,ptr.InternetAddressList,int,ptr.InternetAddress	proc put(ial: ptr InternetAddressList; index: int; ia: ptr InternetAddress)		60
-nim	`$`	gmime/internet_address.html#$,ptr.InternetAddress	proc `$`(address: ptr InternetAddress): string		70
+nim	getName	gmime/internet_address.html#getName,ptr.InternetAddress	proc getName(ia: ptr InternetAddress): string		12
+nim	getCharset	gmime/internet_address.html#getCharset,ptr.InternetAddress	proc getCharset(ia: ptr InternetAddress): string		17
+nim	add	gmime/internet_address.html#add,ptr.InternetAddressList,ptr.InternetAddress	proc add(ial: ptr InternetAddressList; ia: ptr InternetAddress): int		25
+nim	prepend	gmime/internet_address.html#prepend,ptr.InternetAddressList,ptr.InternetAddressList	proc prepend(ial, ial2: ptr InternetAddressList)		30
+nim	append	gmime/internet_address.html#append,ptr.InternetAddressList,ptr.InternetAddressList	proc append(ial, ial2: ptr InternetAddressList)		34
+nim	insert	gmime/internet_address.html#insert,ptr.InternetAddressList,ptr.InternetAddress,int	proc insert(ial: ptr InternetAddressList; ia: ptr InternetAddress; index: int)		38
+nim	remove	gmime/internet_address.html#remove,ptr.InternetAddressList,ptr.InternetAddress	proc remove(ial: ptr InternetAddressList; ia: ptr InternetAddress): bool		42
+nim	removeAt	gmime/internet_address.html#removeAt,ptr.InternetAddressList,int	proc removeAt(ial: ptr InternetAddressList; index: int): bool		46
+nim	contains	gmime/internet_address.html#contains,ptr.InternetAddressList,ptr.InternetAddress	proc contains(ial: ptr InternetAddressList; ia: ptr InternetAddress): bool		50
+nim	indexOf	gmime/internet_address.html#indexOf,ptr.InternetAddressList,ptr.InternetAddress	proc indexOf(ial: ptr InternetAddressList; ia: ptr InternetAddress): int		54
+nim	get	gmime/internet_address.html#get,ptr.InternetAddressList,int	proc get(ial: ptr InternetAddressList; index: int): ptr InternetAddress		58
+nim	len	gmime/internet_address.html#len,ptr.InternetAddressList	proc len(ial: ptr InternetAddressList): int		62
+nim	put	gmime/internet_address.html#put,ptr.InternetAddressList,int,ptr.InternetAddress	proc put(ial: ptr InternetAddressList; index: int; ia: ptr InternetAddress)		66
+nim	`$`	gmime/internet_address.html#$,ptr.InternetAddress	proc `$`(address: ptr InternetAddress): string		76

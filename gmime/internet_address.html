@@ -94,6 +94,10 @@
   <li><a class="reference" href="#insert%2Cptr.InternetAddressList%2Cptr.InternetAddress%2Cint" title="insert(ial: ptr InternetAddressList; ia: ptr InternetAddress; index: int)">insert(ial: ptr InternetAddressList; ia: ptr InternetAddress; index: int)</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">len
+  <li><a class="reference" href="#len%2Cptr.InternetAddressList" title="len(ial: ptr InternetAddressList): int">len(ial: ptr InternetAddressList): int</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">prepend
   <li><a class="reference" href="#prepend%2Cptr.InternetAddressList%2Cptr.InternetAddressList" title="prepend(ial, ial2: ptr InternetAddressList)">prepend(ial, ial2: ptr InternetAddressList)</a></li>
 
@@ -113,6 +117,9 @@
 
     </ul>
   </details>
+</li>
+<li>
+  <a class="reference reference-toplevel" href="#19" id="69">Exports</a>
 </li>
 
 </ul>
@@ -240,6 +247,17 @@
 </div>
 
 </div>
+<div id="len-procs-all">
+  <div id="len,ptr.InternetAddressList">
+  <dt><pre><span class="Keyword">proc</span> <a href="#len%2Cptr.InternetAddressList"><span class="Identifier">len</span></a><span class="Other">(</span><span class="Identifier">ial</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">int</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Get the number of InternetAddresses in an InternetAddressList
+    
+  </dd>
+</div>
+
+</div>
 <div id="prepend-procs-all">
   <div id="prepend,ptr.InternetAddressList,ptr.InternetAddressList">
   <dt><pre><span class="Keyword">proc</span> <a href="#prepend%2Cptr.InternetAddressList%2Cptr.InternetAddressList"><span class="Identifier">prepend</span></a><span class="Other">(</span><span class="Identifier">ial</span><span class="Other">,</span> <span class="Identifier">ial2</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
@@ -293,6 +311,12 @@
 
   </dl>
 </div>
+<div class="section" id="19">
+  <h1><a class="toc-backref" href="#19">Exports</a></h1>
+  <dl class="item">
+    <a href="bindings/gmime_internet_address.html#internet_address_to_string,ptr.InternetAddress,ptr.GMimeFormatOptions,gboolean"><span class="Identifier">internet_address_to_string</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_mailbox_get_idn_addr,ptr.InternetAddressMailbox"><span class="Identifier">internet_address_mailbox_get_idn_addr</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_remove,ptr.InternetAddressList,ptr.InternetAddress"><span class="Identifier">internet_address_list_remove</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_set_name,ptr.InternetAddress,cstring"><span class="Identifier">internet_address_set_name</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_prepend,ptr.InternetAddressList,ptr.InternetAddressList"><span class="Identifier">internet_address_list_prepend</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_get_type"><span class="Identifier">internet_address_get_type</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddressMailboxClass"><span class="Identifier">InternetAddressMailboxClass</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddressMailbox"><span class="Identifier">InternetAddressMailbox</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddressGroupClass"><span class="Identifier">InternetAddressGroupClass</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_group_get_type"><span class="Identifier">internet_address_group_get_type</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_get_address,ptr.InternetAddressList,int"><span class="Identifier">internet_address_list_get_address</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_length,ptr.InternetAddressList"><span class="Identifier">internet_address_list_length</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_add,ptr.InternetAddressList,ptr.InternetAddress"><span class="Identifier">internet_address_list_add</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_mailbox_set_addr,ptr.InternetAddressMailbox,cstring"><span class="Identifier">internet_address_mailbox_set_addr</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_group_new,cstring"><span class="Identifier">internet_address_group_new</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_insert,ptr.InternetAddressList,int,ptr.InternetAddress"><span class="Identifier">internet_address_list_insert</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_append,ptr.InternetAddressList,ptr.InternetAddressList"><span class="Identifier">internet_address_list_append</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_new"><span class="Identifier">internet_address_list_new</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_get_type"><span class="Identifier">internet_address_list_get_type</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_to_string,ptr.InternetAddressList,ptr.GMimeFormatOptions,gboolean"><span class="Identifier">internet_address_list_to_string</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_get_name,ptr.InternetAddress"><span class="Identifier">internet_address_get_name</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_append_parse,ptr.InternetAddressList,ptr.GMimeParserOptions,cstring"><span class="Identifier">internet_address_list_append_parse</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_encode,ptr.InternetAddressList,ptr.GMimeFormatOptions,pointer"><span class="Identifier">internet_address_list_encode</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_group_get_members,ptr.InternetAddressGroup"><span class="Identifier">internet_address_group_get_members</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_mailbox_get_type"><span class="Identifier">internet_address_mailbox_get_type</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_clear,ptr.InternetAddressList"><span class="Identifier">internet_address_list_clear</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_group_set_members,ptr.InternetAddressGroup,ptr.InternetAddressList"><span class="Identifier">internet_address_group_set_members</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_contains,ptr.InternetAddressList,ptr.InternetAddress"><span class="Identifier">internet_address_list_contains</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_set_charset,ptr.InternetAddress,cstring"><span class="Identifier">internet_address_set_charset</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddress"><span class="Identifier">InternetAddress</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddressGroup"><span class="Identifier">InternetAddressGroup</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_remove_at,ptr.InternetAddressList,int"><span class="Identifier">internet_address_list_remove_at</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddressListClass"><span class="Identifier">InternetAddressListClass</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_parse,ptr.GMimeParserOptions,cstring"><span class="Identifier">internet_address_list_parse</span></a>, <a href="bindings/gmime_internet_address.html#InternetAddressClass"><span class="Identifier">InternetAddressClass</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_mailbox_new,cstring,cstring"><span class="Identifier">internet_address_mailbox_new</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_mailbox_get_addr,ptr.InternetAddressMailbox"><span class="Identifier">internet_address_mailbox_get_addr</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_group_add_member,ptr.InternetAddressGroup,ptr.InternetAddress"><span class="Identifier">internet_address_group_add_member</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_get_charset,ptr.InternetAddress"><span class="Identifier">internet_address_get_charset</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_index_of,ptr.InternetAddressList,ptr.InternetAddress"><span class="Identifier">internet_address_list_index_of</span></a>, <a href="bindings/gmime_internet_address.html#internet_address_list_set_address,ptr.InternetAddressList,int,ptr.InternetAddress"><span class="Identifier">internet_address_list_set_address</span></a>
+  </dl>
+</div>
 
   </div>
 </div>
@@ -300,7 +324,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 18:59:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 19:55:41 UTC</small>
       </div>
     </div>
   </div>
