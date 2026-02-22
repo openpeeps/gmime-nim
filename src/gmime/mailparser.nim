@@ -4,7 +4,7 @@
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/gmime-nim
 
-import ./gmime/bindings/[glib, gmime_parser, gmime_stream, gmime_stream_fs]
+import ./bindings/[glib, gmime_parser, gmime_stream, gmime_stream_fs]
 import ./internet_address
 
 type
