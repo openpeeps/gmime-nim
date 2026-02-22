@@ -1,9 +1,9 @@
 nimTitle	gmime	gmime.html	module gmime		0
-nim	gmime_major_version	gmime.html#gmime_major_version	var gmime_major_version		17
-nim	gmime_minor_version	gmime.html#gmime_minor_version	var gmime_minor_version		18
-nim	gmime_micro_version	gmime.html#gmime_micro_version	var gmime_micro_version		19
-nim	gmime_interface_age	gmime.html#gmime_interface_age	var gmime_interface_age		20
-nim	gmime_binary_age	gmime.html#gmime_binary_age	var gmime_binary_age		21
-nim	g_mime_check_version	gmime.html#g_mime_check_version,guint,guint,guint	proc g_mime_check_version(major: guint; minor: guint; micro: guint): gboolean		23
-nim	g_mime_init	gmime.html#g_mime_init	proc g_mime_init()		24
-nim	g_mime_shutdown	gmime.html#g_mime_shutdown	proc g_mime_shutdown()		25
+nim	gmime_major_version	gmime.html#gmime_major_version	var gmime_major_version		22
+nim	gmime_minor_version	gmime.html#gmime_minor_version	var gmime_minor_version		23
+nim	gmime_micro_version	gmime.html#gmime_micro_version	var gmime_micro_version		24
+nim	gmime_interface_age	gmime.html#gmime_interface_age	var gmime_interface_age		25
+nim	gmime_binary_age	gmime.html#gmime_binary_age	var gmime_binary_age		26
+nim	g_mime_check_version	gmime.html#g_mime_check_version,guint,guint,guint	proc g_mime_check_version(major: guint; minor: guint; micro: guint): gboolean		28
+nim	g_mime_init	gmime.html#g_mime_init	proc g_mime_init()		29
+nim	g_mime_shutdown	gmime.html#g_mime_shutdown	proc g_mime_shutdown()		30
