@@ -30,6 +30,5 @@ jobs:
             pkg-config \
             libglib2.0-dev \
             libgmime-3.0-dev \
-      - run: nimble install -Y
       - run: nim c -r src/gmime.nim
       - run: nimble test
