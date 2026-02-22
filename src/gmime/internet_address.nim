@@ -7,6 +7,8 @@
 import ./bindings/glib
 import ./bindings/gmime_internet_address
 
+export gmime_internet_address
+
 proc getName*(ia: ptr InternetAddress): string =
   ## Get the name from an InternetAddress as a Nim string.
   if ia != nil:
@@ -56,6 +58,10 @@ proc indexOf*(ial: ptr InternetAddressList, ia: ptr InternetAddress): int =
 proc get*(ial: ptr InternetAddressList, index: int): ptr InternetAddress =
   ## Get an InternetAddress at a specific index from an InternetAddressList
   internet_address_list_get_address(ial, index)
+
+proc len*(ial: ptr InternetAddressList): int =
+  ## Get the number of InternetAddresses in an InternetAddressList
+  internet_address_list_length(ial)
 
 proc put*(ial: ptr InternetAddressList, index: int, ia: ptr InternetAddress) =
   ## Set an InternetAddress at a specific index in an InternetAddressList

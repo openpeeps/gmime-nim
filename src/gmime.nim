@@ -33,6 +33,5 @@ proc g_mime_shutdown*()
 #
 # High-level API 
 #
-import ./gmime/internet_address
-export internet_address
-
+import ./gmime/[mailparser, internet_address]
+export mailparser, internet_address

@@ -19,8 +19,6 @@ type
     GMIME_FORMAT_MBOX,
     GMIME_FORMAT_MMDF
 
-# Type definitions
-type
   GMimeParser* = object
     parent_object: pointer # GObject, to be imported later
     priv: pointer # ptr GMimeParserPrivate, private
