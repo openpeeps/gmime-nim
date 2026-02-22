@@ -7,6 +7,7 @@
 import ./gmime_certificate
 import ./glib
 
+{.push importc, cdecl, header: "gmime/gmime.h".}
 # Enum definitions
 type
   GMimeSignatureStatus* = enum
@@ -31,25 +32,24 @@ const
 
 # Type definitions
 type
-  GMimeSignature* = object
+  GMimeSignature* {.byCopy.} = object
     parent_object: pointer # GObject, to be imported later
     status: GMimeSignatureStatus
     cert: ptr GMimeCertificate
     created: time_t
     expires: time_t
 
-  GMimeSignatureClass* = object
+  GMimeSignatureClass* {.byCopy.} = object
     parent_class: pointer # GObjectClass, to be imported later
 
-  GMimeSignatureList* = object
+  GMimeSignatureList* {.byCopy.} = object
     parent_object: pointer # GObject, to be imported later
     array: ptr GPtrArray
 
-  GMimeSignatureListClass* = object
+  GMimeSignatureListClass* {.byCopy.} = object
     parent_class: pointer # GObjectClass, to be imported later
 
 # Function declarations
-{.push importc, cdecl, header: "gmime/gmime.h".}
 proc g_mime_signature_get_type*(): GType
 
 proc g_mime_signature_new*(): ptr GMimeSignature

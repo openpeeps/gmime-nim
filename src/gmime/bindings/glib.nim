@@ -31,8 +31,6 @@ type
   GDestroyNotify* = proc(data: pointer)
   GBytes* = object
     dummy: array[16, byte] # Size can vary; 16 bytes is a common minimum
-  GDateTime* = object
-    dummy: array[16, byte] # Size can vary; 16 bytes is a common minimum
 
   GPtrArray* = object
     pdata*: ptr pointer
@@ -60,4 +58,12 @@ type
 
 {.push cdecl, importc, header: "glib-object.h".}
 proc g_object_unref*(obj: pointer)
+{.pop.}
+
+{.push cdecl, importc, header: "glib.h".}
+type
+  GDateTime* {.incompleteStruct.} = object
+    # Opaque struct, actual fields are not exposed
+
+proc g_date_time_to_unix*(datetime: ptr GDateTime): time_t
 {.pop.}

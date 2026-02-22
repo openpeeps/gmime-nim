@@ -3,8 +3,9 @@
 # (c) 2026 George Lemon | MIT License
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/gmime-nim
+import std/[times, options]
 
-import ./bindings/[glib, gmime_parser, gmime_stream, gmime_stream_fs]
+import ./bindings/[glib, gmime_parser, gmime_parser_options, gmime_stream_fs]
 import ./internet_address
 
 type
@@ -13,7 +14,7 @@ type
 proc parseEmail*(filePath: string): ptr GMimeParser =
   ## Parses the email message at the given file path and returns a
   ## GMimeParser instance.
-  let stream = g_mime_stream_fsOpen(filePath, GMimeReadOnly, 0644, nil)
+  let stream = g_mime_stream_fs_open(filePath, GMimeReadOnly, 0644, nil)
   if stream == nil:
     raise newException(MailParsingError,
         "Failed to open stream for file: " & filePath)
@@ -28,6 +29,21 @@ proc parseEmail*(filePath: string): ptr GMimeParser =
 proc parseMail*(filePath: string): ptr GMimeParser {.inline.} = 
   ## This is an alias for `parseEmail`, provided for convenience and readability.
   parseEmail(filePath)
+
+#
+# Parser Options
+#
+proc getDefaultParserOptions*(): ptr GMimeParserOptions =
+  ## Retrieves the default parser options for GMime.
+  g_mime_parser_options_get_default()
+
+proc newParserOptions*: ptr GMimeParserOptions =
+  ## Creates a new instance of GMimeParserOptions with default values.
+  g_mime_parser_options_new()
+
+proc allowAddressesWithoutDomain*(options: ptr GMimeParserOptions, allow: bool) =
+  ## Sets whether the parser should allow email addresses without a domain part.
+  g_mime_parser_options_set_allow_addresses_without_domain(options, allow.cint)
 
 proc close*(parser: ptr GMimeParser) =
   ## Closes the parser and releases any associated resources.
@@ -62,3 +78,23 @@ proc hasSubject*(message: ptr GMimeMessage): bool =
 proc getFromList*(message: ptr GMimeMessage): ptr InternetAddressList =
   ## Retrieves the list of sender addresses from the email message.
   g_mime_message_get_from(message)
+
+proc getCCList*(message: ptr GMimeMessage): ptr InternetAddressList =
+  ## Retrieves the list of CC (carbon copy) addresses from the email message.
+  g_mime_message_get_cc(message)
+
+proc getBCCList*(message: ptr GMimeMessage): ptr InternetAddressList =
+  ## Retrieves the list of BCC (blind carbon copy) addresses from the email message.
+  g_mime_message_get_bcc(message)
+
+proc hasDateTime*(message: ptr GMimeMessage): bool =
+  ## Checks if the email message has a valid date and time.
+  g_mime_message_get_date(message) != nil
+
+proc getDateTime*(message: ptr GMimeMessage): Option[DateTime] =
+  ## Retrieves the date and time when the email message was sent.
+  ## Returns `none` if the date is not available.
+  let gd = g_mime_message_get_date(message)
+  if gd != nil:
+    return some(fromUnix(g_date_time_to_unix(gd)).utc)
+  none(DateTime)

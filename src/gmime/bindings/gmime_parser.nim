@@ -11,7 +11,7 @@ import ./gmime_content_type
 import ./gmime_parser_options
 import ./gmime_stream
 
-# Enum definitions
+{.push importc, cdecl, header: "gmime/gmime.h".}
 type
   GMimeFormat* = enum
     ## The format of the message is unknown. This is the default.
@@ -19,17 +19,16 @@ type
     GMIME_FORMAT_MBOX,
     GMIME_FORMAT_MMDF
 
-  GMimeParser* = object
+  GMimeParser* {.byCopy.} = object
     parent_object: pointer # GObject, to be imported later
     priv: pointer # ptr GMimeParserPrivate, private
 
-  GMimeParserClass* = object
+  GMimeParserClass* {.byCopy.} = object
     parent_class: pointer # GObjectClass, to be imported later
 
   GMimeParserHeaderRegexFunc* = proc(parser: ptr GMimeParser, header: cstring, value: cstring, offset: gint64, user_data: pointer)
 
 # Function declarations
-{.push importc, cdecl, header: "gmime/gmime.h".}
 proc g_mime_parser_get_type*(): GType
 
 proc g_mime_parser_new*(): ptr GMimeParser

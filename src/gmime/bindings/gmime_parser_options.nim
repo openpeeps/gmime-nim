@@ -7,6 +7,7 @@
 
 import ./glib
 
+{.push importc, cdecl, header: "gmime/gmime.h".}
 # Enum definitions
 type
   GMimeRfcComplianceMode* = enum
@@ -34,12 +35,11 @@ type
 
 # Type definitions
 type
-  GMimeParserOptions* = object
+  GMimeParserOptions* {.byCopy.} = object
 
   GMimeParserWarningFunc* = proc(offset: gint64, errcode: GMimeParserWarning, item: cstring, user_data: pointer)
 
 # Function declarations
-{.push importc, cdecl, header: "gmime/gmime.h".}
 proc g_mime_parser_options_get_type*(): GType
 proc g_mime_parser_options_get_default*(): ptr GMimeParserOptions
 proc g_mime_parser_options_new*(): ptr GMimeParserOptions
