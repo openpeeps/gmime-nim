@@ -67,7 +67,11 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#12" id="62">Procs</a></summary>
     <ul class="simple simple-toc-section">
-      <ul class="simple nested-toc-section">close
+      <ul class="simple nested-toc-section">allowAddressesWithoutDomain
+  <li><a class="reference" href="#allowAddressesWithoutDomain%2Cptr.GMimeParserOptions%2Cbool" title="allowAddressesWithoutDomain(options: ptr GMimeParserOptions; allow: bool)">allowAddressesWithoutDomain(options: ptr GMimeParserOptions; allow: bool)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">close
   <li><a class="reference" href="#close%2Cptr.GMimeParser" title="close(parser: ptr GMimeParser)">close(parser: ptr GMimeParser)</a></li>
 
 </ul>
@@ -79,6 +83,22 @@
   <li><a class="reference" href="#constructMessage%2Cptr.GMimeParser" title="constructMessage(parser: ptr GMimeParser): ptr GMimeMessage">constructMessage(parser: ptr GMimeParser): ptr GMimeMessage</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">getBCCList
+  <li><a class="reference" href="#getBCCList%2Cptr.GMimeMessage" title="getBCCList(message: ptr GMimeMessage): ptr InternetAddressList">getBCCList(message: ptr GMimeMessage): ptr InternetAddressList</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">getCCList
+  <li><a class="reference" href="#getCCList%2Cptr.GMimeMessage" title="getCCList(message: ptr GMimeMessage): ptr InternetAddressList">getCCList(message: ptr GMimeMessage): ptr InternetAddressList</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">getDateTime
+  <li><a class="reference" href="#getDateTime%2Cptr.GMimeMessage" title="getDateTime(message: ptr GMimeMessage): Option[DateTime]">getDateTime(message: ptr GMimeMessage): Option[DateTime]</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">getDefaultParserOptions
+  <li><a class="reference" href="#getDefaultParserOptions" title="getDefaultParserOptions(): ptr GMimeParserOptions">getDefaultParserOptions(): ptr GMimeParserOptions</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">getFromList
   <li><a class="reference" href="#getFromList%2Cptr.GMimeMessage" title="getFromList(message: ptr GMimeMessage): ptr InternetAddressList">getFromList(message: ptr GMimeMessage): ptr InternetAddressList</a></li>
 
@@ -87,8 +107,16 @@
   <li><a class="reference" href="#getSubject%2Cptr.GMimeMessage" title="getSubject(message: ptr GMimeMessage): string">getSubject(message: ptr GMimeMessage): string</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">hasDateTime
+  <li><a class="reference" href="#hasDateTime%2Cptr.GMimeMessage" title="hasDateTime(message: ptr GMimeMessage): bool">hasDateTime(message: ptr GMimeMessage): bool</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">hasSubject
   <li><a class="reference" href="#hasSubject%2Cptr.GMimeMessage" title="hasSubject(message: ptr GMimeMessage): bool">hasSubject(message: ptr GMimeMessage): bool</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">newParserOptions
+  <li><a class="reference" href="#newParserOptions" title="newParserOptions(): ptr GMimeParserOptions">newParserOptions(): ptr GMimeParserOptions</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">parseEmail
@@ -115,7 +143,7 @@
     <div class="section" id="6">
   <h1><a class="toc-backref" href="#6">Imports</a></h1>
   <dl class="item">
-    <a class="reference external" href="bindings/glib.html">bindings/glib</a>, <a class="reference external" href="bindings/gmime_parser.html">bindings/gmime_parser</a>, <a class="reference external" href="bindings/gmime_stream.html">bindings/gmime_stream</a>, <a class="reference external" href="bindings/gmime_stream_fs.html">bindings/gmime_stream_fs</a>, <a class="reference external" href="internet_address.html">internet_address</a>, <a class="reference external" href="bindings/gmime_message.html">bindings/gmime_message</a>
+    <a class="reference external" href="bindings/glib.html">bindings/glib</a>, <a class="reference external" href="bindings/gmime_parser.html">bindings/gmime_parser</a>, <a class="reference external" href="bindings/gmime_parser_options.html">bindings/gmime_parser_options</a>, <a class="reference external" href="bindings/gmime_stream_fs.html">bindings/gmime_stream_fs</a>, <a class="reference external" href="internet_address.html">internet_address</a>, <a class="reference external" href="bindings/gmime_message.html">bindings/gmime_message</a>
   </dl>
 </div>
 <div class="section" id="7">
@@ -135,7 +163,19 @@
 <div class="section" id="12">
   <h1><a class="toc-backref" href="#12">Procs</a></h1>
   <dl class="item">
-    <div id="close-procs-all">
+    <div id="allowAddressesWithoutDomain-procs-all">
+  <div id="allowAddressesWithoutDomain,ptr.GMimeParserOptions,bool">
+  <dt><pre><span class="Keyword">proc</span> <a href="#allowAddressesWithoutDomain%2Cptr.GMimeParserOptions%2Cbool"><span class="Identifier">allowAddressesWithoutDomain</span></a><span class="Other">(</span><span class="Identifier">options</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_parser_options.html#GMimeParserOptions"><span class="Identifier">GMimeParserOptions</span></a><span class="Other">;</span> <span class="Identifier">allow</span><span class="Other">:</span> <span class="Identifier">bool</span><span class="Other">)</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Sets whether the parser should allow email addresses without a domain part.
+    
+  </dd>
+</div>
+
+</div>
+<div id="close-procs-all">
   <div id="close,ptr.GMimeParser">
   <dt><pre><span class="Keyword">proc</span> <a href="#close%2Cptr.GMimeParser"><span class="Identifier">close</span></a><span class="Other">(</span><span class="Identifier">parser</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_parser.html#GMimeParser"><span class="Identifier">GMimeParser</span></a><span class="Other">)</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
@@ -170,6 +210,54 @@
 </div>
 
 </div>
+<div id="getBCCList-procs-all">
+  <div id="getBCCList,ptr.GMimeMessage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getBCCList%2Cptr.GMimeMessage"><span class="Identifier">getBCCList</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_message.html#GMimeMessage"><span class="Identifier">GMimeMessage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Retrieves the list of BCC (blind carbon copy) addresses from the email message.
+    
+  </dd>
+</div>
+
+</div>
+<div id="getCCList-procs-all">
+  <div id="getCCList,ptr.GMimeMessage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getCCList%2Cptr.GMimeMessage"><span class="Identifier">getCCList</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_message.html#GMimeMessage"><span class="Identifier">GMimeMessage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Retrieves the list of CC (carbon copy) addresses from the email message.
+    
+  </dd>
+</div>
+
+</div>
+<div id="getDateTime-procs-all">
+  <div id="getDateTime,ptr.GMimeMessage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getDateTime%2Cptr.GMimeMessage"><span class="Identifier">getDateTime</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_message.html#GMimeMessage"><span class="Identifier">GMimeMessage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">Option</span><span class="Other">[</span><span class="Identifier">DateTime</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Retrieves the date and time when the email message was sent. Returns <tt class="docutils literal"><span class="pre"><span class="Identifier">none</span></span></tt> if the date is not available.
+    
+  </dd>
+</div>
+
+</div>
+<div id="getDefaultParserOptions-procs-all">
+  <div id="getDefaultParserOptions">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getDefaultParserOptions"><span class="Identifier">getDefaultParserOptions</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_parser_options.html#GMimeParserOptions"><span class="Identifier">GMimeParserOptions</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Retrieves the default parser options for GMime.
+    
+  </dd>
+</div>
+
+</div>
 <div id="getFromList-procs-all">
   <div id="getFromList,ptr.GMimeMessage">
   <dt><pre><span class="Keyword">proc</span> <a href="#getFromList%2Cptr.GMimeMessage"><span class="Identifier">getFromList</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_message.html#GMimeMessage"><span class="Identifier">GMimeMessage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a> {.
@@ -194,6 +282,18 @@
 </div>
 
 </div>
+<div id="hasDateTime-procs-all">
+  <div id="hasDateTime,ptr.GMimeMessage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#hasDateTime%2Cptr.GMimeMessage"><span class="Identifier">hasDateTime</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_message.html#GMimeMessage"><span class="Identifier">GMimeMessage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Checks if the email message has a valid date and time.
+    
+  </dd>
+</div>
+
+</div>
 <div id="hasSubject-procs-all">
   <div id="hasSubject,ptr.GMimeMessage">
   <dt><pre><span class="Keyword">proc</span> <a href="#hasSubject%2Cptr.GMimeMessage"><span class="Identifier">hasSubject</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_message.html#GMimeMessage"><span class="Identifier">GMimeMessage</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
@@ -201,6 +301,18 @@
   <dd>
     
     Checks if the email message has a subject.
+    
+  </dd>
+</div>
+
+</div>
+<div id="newParserOptions-procs-all">
+  <div id="newParserOptions">
+  <dt><pre><span class="Keyword">proc</span> <a href="#newParserOptions"><span class="Identifier">newParserOptions</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_parser_options.html#GMimeParserOptions"><span class="Identifier">GMimeParserOptions</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Creates a new instance of GMimeParserOptions with default values.
     
   </dd>
 </div>
@@ -240,7 +352,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 20:16:41 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 20:58:35 UTC</small>
       </div>
     </div>
   </div>

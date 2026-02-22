@@ -1,10 +1,17 @@
 nimTitle	mailparser	gmime/mailparser.html	module gmime/mailparser		0
-nim	MailParsingError	gmime/mailparser.html#MailParsingError	object MailParsingError		11
-nim	parseEmail	gmime/mailparser.html#parseEmail,string	proc parseEmail(filePath: string): ptr GMimeParser		13
-nim	parseMail	gmime/mailparser.html#parseMail,string	proc parseMail(filePath: string): ptr GMimeParser		28
-nim	close	gmime/mailparser.html#close,ptr.GMimeParser	proc close(parser: ptr GMimeParser)		32
-nim	constructMessage	gmime/mailparser.html#constructMessage,ptr.GMimeParser	proc constructMessage(parser: ptr GMimeParser): ptr GMimeMessage		42
-nim	constructMail	gmime/mailparser.html#constructMail,ptr.GMimeParser	proc constructMail(parser: ptr GMimeParser): ptr GMimeMessage		50
-nim	getSubject	gmime/mailparser.html#getSubject,ptr.GMimeMessage	proc getSubject(message: ptr GMimeMessage): string		54
-nim	hasSubject	gmime/mailparser.html#hasSubject,ptr.GMimeMessage	proc hasSubject(message: ptr GMimeMessage): bool		58
-nim	getFromList	gmime/mailparser.html#getFromList,ptr.GMimeMessage	proc getFromList(message: ptr GMimeMessage): ptr InternetAddressList		62
+nim	MailParsingError	gmime/mailparser.html#MailParsingError	object MailParsingError		12
+nim	parseEmail	gmime/mailparser.html#parseEmail,string	proc parseEmail(filePath: string): ptr GMimeParser		14
+nim	parseMail	gmime/mailparser.html#parseMail,string	proc parseMail(filePath: string): ptr GMimeParser		29
+nim	getDefaultParserOptions	gmime/mailparser.html#getDefaultParserOptions	proc getDefaultParserOptions(): ptr GMimeParserOptions		36
+nim	newParserOptions	gmime/mailparser.html#newParserOptions	proc newParserOptions(): ptr GMimeParserOptions		40
+nim	allowAddressesWithoutDomain	gmime/mailparser.html#allowAddressesWithoutDomain,ptr.GMimeParserOptions,bool	proc allowAddressesWithoutDomain(options: ptr GMimeParserOptions; allow: bool)		44
+nim	close	gmime/mailparser.html#close,ptr.GMimeParser	proc close(parser: ptr GMimeParser)		48
+nim	constructMessage	gmime/mailparser.html#constructMessage,ptr.GMimeParser	proc constructMessage(parser: ptr GMimeParser): ptr GMimeMessage		58
+nim	constructMail	gmime/mailparser.html#constructMail,ptr.GMimeParser	proc constructMail(parser: ptr GMimeParser): ptr GMimeMessage		66
+nim	getSubject	gmime/mailparser.html#getSubject,ptr.GMimeMessage	proc getSubject(message: ptr GMimeMessage): string		70
+nim	hasSubject	gmime/mailparser.html#hasSubject,ptr.GMimeMessage	proc hasSubject(message: ptr GMimeMessage): bool		74
+nim	getFromList	gmime/mailparser.html#getFromList,ptr.GMimeMessage	proc getFromList(message: ptr GMimeMessage): ptr InternetAddressList		78
+nim	getCCList	gmime/mailparser.html#getCCList,ptr.GMimeMessage	proc getCCList(message: ptr GMimeMessage): ptr InternetAddressList		82
+nim	getBCCList	gmime/mailparser.html#getBCCList,ptr.GMimeMessage	proc getBCCList(message: ptr GMimeMessage): ptr InternetAddressList		86
+nim	hasDateTime	gmime/mailparser.html#hasDateTime,ptr.GMimeMessage	proc hasDateTime(message: ptr GMimeMessage): bool		90
+nim	getDateTime	gmime/mailparser.html#getDateTime,ptr.GMimeMessage	proc getDateTime(message: ptr GMimeMessage): Option[DateTime]		94

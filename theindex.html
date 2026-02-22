@@ -34,6 +34,10 @@
 <li><a class="reference external"
           data-doc-search-tag="internet_address: proc add(ial: ptr InternetAddressList; ia: ptr InternetAddress): int" href="gmime/internet_address.html#add%2Cptr.InternetAddressList%2Cptr.InternetAddress">internet_address: proc add(ial: ptr InternetAddressList; ia: ptr InternetAddress): int</a></li>
           </ul></dd>
+<dt><a name="allowAddressesWithoutDomain" href="#allowAddressesWithoutDomain"><span>allowAddressesWithoutDomain:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="mailparser: proc allowAddressesWithoutDomain(options: ptr GMimeParserOptions; allow: bool)" href="gmime/mailparser.html#allowAddressesWithoutDomain%2Cptr.GMimeParserOptions%2Cbool">mailparser: proc allowAddressesWithoutDomain(options: ptr GMimeParserOptions; allow: bool)</a></li>
+          </ul></dd>
 <dt><a name="append" href="#append"><span>append:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="internet_address: proc append(ial, ial2: ptr InternetAddressList)" href="gmime/internet_address.html#append%2Cptr.InternetAddressList%2Cptr.InternetAddressList">internet_address: proc append(ial, ial2: ptr InternetAddressList)</a></li>
@@ -222,6 +226,10 @@
 <li><a class="reference external"
           data-doc-search-tag="glib: object GDateTime" href="gmime/bindings/glib.html#GDateTime">glib: object GDateTime</a></li>
           </ul></dd>
+<dt><a name="g_date_time_to_unix" href="#g_date_time_to_unix"><span>g_date_time_to_unix:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="glib: proc g_date_time_to_unix(datetime: ptr GDateTime): time_t" href="gmime/bindings/glib.html#g_date_time_to_unix%2Cptr.GDateTime">glib: proc g_date_time_to_unix(datetime: ptr GDateTime): time_t</a></li>
+          </ul></dd>
 <dt><a name="GDestroyNotify" href="#GDestroyNotify"><span>GDestroyNotify:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="glib: type GDestroyNotify" href="gmime/bindings/glib.html#GDestroyNotify">glib: type GDestroyNotify</a></li>
@@ -234,9 +242,25 @@
 <li><a class="reference external"
           data-doc-search-tag="internet_address: proc get(ial: ptr InternetAddressList; index: int): ptr InternetAddress" href="gmime/internet_address.html#get%2Cptr.InternetAddressList%2Cint">internet_address: proc get(ial: ptr InternetAddressList; index: int): ptr InternetAddress</a></li>
           </ul></dd>
+<dt><a name="getBCCList" href="#getBCCList"><span>getBCCList:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="mailparser: proc getBCCList(message: ptr GMimeMessage): ptr InternetAddressList" href="gmime/mailparser.html#getBCCList%2Cptr.GMimeMessage">mailparser: proc getBCCList(message: ptr GMimeMessage): ptr InternetAddressList</a></li>
+          </ul></dd>
+<dt><a name="getCCList" href="#getCCList"><span>getCCList:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="mailparser: proc getCCList(message: ptr GMimeMessage): ptr InternetAddressList" href="gmime/mailparser.html#getCCList%2Cptr.GMimeMessage">mailparser: proc getCCList(message: ptr GMimeMessage): ptr InternetAddressList</a></li>
+          </ul></dd>
 <dt><a name="getCharset" href="#getCharset"><span>getCharset:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="internet_address: proc getCharset(ia: ptr InternetAddress): string" href="gmime/internet_address.html#getCharset%2Cptr.InternetAddress">internet_address: proc getCharset(ia: ptr InternetAddress): string</a></li>
+          </ul></dd>
+<dt><a name="getDateTime" href="#getDateTime"><span>getDateTime:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="mailparser: proc getDateTime(message: ptr GMimeMessage): Option[DateTime]" href="gmime/mailparser.html#getDateTime%2Cptr.GMimeMessage">mailparser: proc getDateTime(message: ptr GMimeMessage): Option[DateTime]</a></li>
+          </ul></dd>
+<dt><a name="getDefaultParserOptions" href="#getDefaultParserOptions"><span>getDefaultParserOptions:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="mailparser: proc getDefaultParserOptions(): ptr GMimeParserOptions" href="gmime/mailparser.html#getDefaultParserOptions">mailparser: proc getDefaultParserOptions(): ptr GMimeParserOptions</a></li>
           </ul></dd>
 <dt><a name="getFromList" href="#getFromList"><span>getFromList:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -840,25 +864,25 @@
           </ul></dd>
 <dt><a name="GMimeContentTypeClass" href="#GMimeContentTypeClass"><span>GMimeContentTypeClass:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_content_type: object GMimeContentTypeClass" href="gmime/bindings/gmime_content_type.html#GMimeContentTypeClass">gmime_content_type: object GMimeContentTypeClass</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_contenttype: object GMimeContentTypeClass" href="gmime/bindings/gmime_contenttype.html#GMimeContentTypeClass">gmime_contenttype: object GMimeContentTypeClass</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_content_type: object GMimeContentTypeClass" href="gmime/bindings/gmime_content_type.html#GMimeContentTypeClass">gmime_content_type: object GMimeContentTypeClass</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_encode" href="#g_mime_content_type_encode"><span>g_mime_content_type_encode:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_encode(content_type: ptr GMimeContentType;
-                           options: ptr GMimeFormatOptions): cstring" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_encode%2Cptr.GMimeContentType%2Cptr.GMimeFormatOptions">gmime_content_type: proc g_mime_content_type_encode(content_type: ptr GMimeContentType;
-                           options: ptr GMimeFormatOptions): cstring</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_encode(contentType: ptr GMimeContentType;
                            options: ptr GMimeFormatOptions): cstring" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_encode%2Cptr.GMimeContentType%2Cptr.GMimeFormatOptions">gmime_contenttype: proc g_mime_content_type_encode(contentType: ptr GMimeContentType;
+                           options: ptr GMimeFormatOptions): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_encode(content_type: ptr GMimeContentType;
+                           options: ptr GMimeFormatOptions): cstring" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_encode%2Cptr.GMimeContentType%2Cptr.GMimeFormatOptions">gmime_content_type: proc g_mime_content_type_encode(content_type: ptr GMimeContentType;
                            options: ptr GMimeFormatOptions): cstring</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_get_media_subtype" href="#g_mime_content_type_get_media_subtype"><span>g_mime_content_type_get_media_subtype:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_get_media_subtype(contentType: ptr GMimeContentType): cstring" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_get_media_subtype%2Cptr.GMimeContentType">gmime_contenttype: proc g_mime_content_type_get_media_subtype(contentType: ptr GMimeContentType): cstring</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_content_type: proc g_mime_content_type_get_media_subtype(content_type: ptr GMimeContentType): cstring" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_get_media_subtype%2Cptr.GMimeContentType">gmime_content_type: proc g_mime_content_type_get_media_subtype(content_type: ptr GMimeContentType): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_get_media_subtype(contentType: ptr GMimeContentType): cstring" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_get_media_subtype%2Cptr.GMimeContentType">gmime_contenttype: proc g_mime_content_type_get_media_subtype(contentType: ptr GMimeContentType): cstring</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_get_media_type" href="#g_mime_content_type_get_media_type"><span>g_mime_content_type_get_media_type:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -868,9 +892,9 @@
           </ul></dd>
 <dt><a name="g_mime_content_type_get_mime_type" href="#g_mime_content_type_get_mime_type"><span>g_mime_content_type_get_mime_type:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_get_mime_type(content_type: ptr GMimeContentType): cstring" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_get_mime_type%2Cptr.GMimeContentType">gmime_content_type: proc g_mime_content_type_get_mime_type(content_type: ptr GMimeContentType): cstring</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_get_mime_type(contentType: ptr GMimeContentType): cstring" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_get_mime_type%2Cptr.GMimeContentType">gmime_contenttype: proc g_mime_content_type_get_mime_type(contentType: ptr GMimeContentType): cstring</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_get_mime_type(content_type: ptr GMimeContentType): cstring" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_get_mime_type%2Cptr.GMimeContentType">gmime_content_type: proc g_mime_content_type_get_mime_type(content_type: ptr GMimeContentType): cstring</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_get_parameter" href="#g_mime_content_type_get_parameter"><span>g_mime_content_type_get_parameter:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -884,15 +908,15 @@
           </ul></dd>
 <dt><a name="g_mime_content_type_get_parameters" href="#g_mime_content_type_get_parameters"><span>g_mime_content_type_get_parameters:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_get_parameters(content_type: ptr GMimeContentType): ptr GMimeParamList" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_get_parameters%2Cptr.GMimeContentType">gmime_content_type: proc g_mime_content_type_get_parameters(content_type: ptr GMimeContentType): ptr GMimeParamList</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_get_parameters(contentType: ptr GMimeContentType): ptr GMimeParamList" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_get_parameters%2Cptr.GMimeContentType">gmime_contenttype: proc g_mime_content_type_get_parameters(contentType: ptr GMimeContentType): ptr GMimeParamList</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_get_parameters(content_type: ptr GMimeContentType): ptr GMimeParamList" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_get_parameters%2Cptr.GMimeContentType">gmime_content_type: proc g_mime_content_type_get_parameters(content_type: ptr GMimeContentType): ptr GMimeParamList</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_get_type" href="#g_mime_content_type_get_type"><span>g_mime_content_type_get_type:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_get_type(): GType" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_get_type">gmime_contenttype: proc g_mime_content_type_get_type(): GType</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_content_type: proc g_mime_content_type_get_type(): GType" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_get_type">gmime_content_type: proc g_mime_content_type_get_type(): GType</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_get_type(): GType" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_get_type">gmime_contenttype: proc g_mime_content_type_get_type(): GType</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_is_type" href="#g_mime_content_type_is_type"><span>g_mime_content_type_is_type:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -906,25 +930,25 @@
           </ul></dd>
 <dt><a name="g_mime_content_type_new" href="#g_mime_content_type_new"><span>g_mime_content_type_new:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_new(typeStr: cstring; subtypeStr: cstring): ptr GMimeContentType" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_new%2Ccstring%2Ccstring">gmime_contenttype: proc g_mime_content_type_new(typeStr: cstring; subtypeStr: cstring): ptr GMimeContentType</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_content_type: proc g_mime_content_type_new(typ: cstring; subtype: cstring): ptr GMimeContentType" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_new%2Ccstring%2Ccstring">gmime_content_type: proc g_mime_content_type_new(typ: cstring; subtype: cstring): ptr GMimeContentType</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_new(typeStr: cstring; subtypeStr: cstring): ptr GMimeContentType" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_new%2Ccstring%2Ccstring">gmime_contenttype: proc g_mime_content_type_new(typeStr: cstring; subtypeStr: cstring): ptr GMimeContentType</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_parse" href="#g_mime_content_type_parse"><span>g_mime_content_type_parse:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_parse(options: ptr GMimeParserOptions; str: cstring): ptr GMimeContentType" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_parse%2Cptr.GMimeParserOptions%2Ccstring">gmime_contenttype: proc g_mime_content_type_parse(options: ptr GMimeParserOptions; str: cstring): ptr GMimeContentType</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_content_type: proc g_mime_content_type_parse(options: ptr GMimeParserOptions; str: cstring): ptr GMimeContentType" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_parse%2Cptr.GMimeParserOptions%2Ccstring">gmime_content_type: proc g_mime_content_type_parse(options: ptr GMimeParserOptions; str: cstring): ptr GMimeContentType</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_parse(options: ptr GMimeParserOptions; str: cstring): ptr GMimeContentType" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_parse%2Cptr.GMimeParserOptions%2Ccstring">gmime_contenttype: proc g_mime_content_type_parse(options: ptr GMimeParserOptions; str: cstring): ptr GMimeContentType</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_set_media_subtype" href="#g_mime_content_type_set_media_subtype"><span>g_mime_content_type_set_media_subtype:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
-          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_set_media_subtype(content_type: ptr GMimeContentType;
-                                      subtype: cstring)" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_set_media_subtype%2Cptr.GMimeContentType%2Ccstring">gmime_content_type: proc g_mime_content_type_set_media_subtype(content_type: ptr GMimeContentType;
-                                      subtype: cstring)</a></li>
-          <li><a class="reference external"
           data-doc-search-tag="gmime_contenttype: proc g_mime_content_type_set_media_subtype(contentType: ptr GMimeContentType;
                                       subtypeStr: cstring)" href="gmime/bindings/gmime_contenttype.html#g_mime_content_type_set_media_subtype%2Cptr.GMimeContentType%2Ccstring">gmime_contenttype: proc g_mime_content_type_set_media_subtype(contentType: ptr GMimeContentType;
                                       subtypeStr: cstring)</a></li>
+          <li><a class="reference external"
+          data-doc-search-tag="gmime_content_type: proc g_mime_content_type_set_media_subtype(content_type: ptr GMimeContentType;
+                                      subtype: cstring)" href="gmime/bindings/gmime_content_type.html#g_mime_content_type_set_media_subtype%2Cptr.GMimeContentType%2Ccstring">gmime_content_type: proc g_mime_content_type_set_media_subtype(content_type: ptr GMimeContentType;
+                                      subtype: cstring)</a></li>
           </ul></dd>
 <dt><a name="g_mime_content_type_set_media_type" href="#g_mime_content_type_set_media_type"><span>g_mime_content_type_set_media_type:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
@@ -3056,6 +3080,10 @@
 <li><a class="reference external"
           data-doc-search-tag="glib: object GValue" href="gmime/bindings/glib.html#GValue">glib: object GValue</a></li>
           </ul></dd>
+<dt><a name="hasDateTime" href="#hasDateTime"><span>hasDateTime:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="mailparser: proc hasDateTime(message: ptr GMimeMessage): bool" href="gmime/mailparser.html#hasDateTime%2Cptr.GMimeMessage">mailparser: proc hasDateTime(message: ptr GMimeMessage): bool</a></li>
+          </ul></dd>
 <dt><a name="hasSubject" href="#hasSubject"><span>hasSubject:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="mailparser: proc hasSubject(message: ptr GMimeMessage): bool" href="gmime/mailparser.html#hasSubject%2Cptr.GMimeMessage">mailparser: proc hasSubject(message: ptr GMimeMessage): bool</a></li>
@@ -3274,6 +3302,10 @@
 <li><a class="reference external"
           data-doc-search-tag="mailparser: object MailParsingError" href="gmime/mailparser.html#MailParsingError">mailparser: object MailParsingError</a></li>
           </ul></dd>
+<dt><a name="newParserOptions" href="#newParserOptions"><span>newParserOptions:</span></a></dt><dd><ul class="simple">
+<li><a class="reference external"
+          data-doc-search-tag="mailparser: proc newParserOptions(): ptr GMimeParserOptions" href="gmime/mailparser.html#newParserOptions">mailparser: proc newParserOptions(): ptr GMimeParserOptions</a></li>
+          </ul></dd>
 <dt><a name="parseEmail" href="#parseEmail"><span>parseEmail:</span></a></dt><dd><ul class="simple">
 <li><a class="reference external"
           data-doc-search-tag="mailparser: proc parseEmail(filePath: string): ptr GMimeParser" href="gmime/mailparser.html#parseEmail%2Cstring">mailparser: proc parseEmail(filePath: string): ptr GMimeParser</a></li>
@@ -3414,7 +3446,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 20:16:41 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 20:58:35 UTC</small>
       </div>
     </div>
   </div>

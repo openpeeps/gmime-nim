@@ -6,22 +6,22 @@ nim	GMimeFormat	gmime/bindings/gmime_parser.html#GMimeFormat	enum GMimeFormat		1
 nim	GMimeParser	gmime/bindings/gmime_parser.html#GMimeParser	object GMimeParser		22
 nim	GMimeParserClass	gmime/bindings/gmime_parser.html#GMimeParserClass	object GMimeParserClass		26
 nim	GMimeParserHeaderRegexFunc	gmime/bindings/gmime_parser.html#GMimeParserHeaderRegexFunc	type GMimeParserHeaderRegexFunc		29
-nim	g_mime_parser_get_type	gmime/bindings/gmime_parser.html#g_mime_parser_get_type	proc g_mime_parser_get_type(): GType		33
-nim	g_mime_parser_new	gmime/bindings/gmime_parser.html#g_mime_parser_new	proc g_mime_parser_new(): ptr GMimeParser		35
-nim	g_mime_parser_new_with_stream	gmime/bindings/gmime_parser.html#g_mime_parser_new_with_stream,ptr.GMimeStream	proc g_mime_parser_new_with_stream(stream: ptr GMimeStream): ptr GMimeParser		36
-nim	g_mime_parser_init_with_stream	gmime/bindings/gmime_parser.html#g_mime_parser_init_with_stream,ptr.GMimeParser,ptr.GMimeStream	proc g_mime_parser_init_with_stream(parser: ptr GMimeParser; stream: ptr GMimeStream)		38
-nim	g_mime_parser_get_persist_stream	gmime/bindings/gmime_parser.html#g_mime_parser_get_persist_stream,ptr.GMimeParser	proc g_mime_parser_get_persist_stream(parser: ptr GMimeParser): gboolean		40
-nim	g_mime_parser_set_persist_stream	gmime/bindings/gmime_parser.html#g_mime_parser_set_persist_stream,ptr.GMimeParser,gboolean	proc g_mime_parser_set_persist_stream(parser: ptr GMimeParser; persist: gboolean)		41
-nim	g_mime_parser_get_format	gmime/bindings/gmime_parser.html#g_mime_parser_get_format,ptr.GMimeParser	proc g_mime_parser_get_format(parser: ptr GMimeParser): GMimeFormat		43
-nim	g_mime_parser_set_format	gmime/bindings/gmime_parser.html#g_mime_parser_set_format,ptr.GMimeParser,GMimeFormat	proc g_mime_parser_set_format(parser: ptr GMimeParser; format: GMimeFormat)		44
-nim	g_mime_parser_get_respect_content_length	gmime/bindings/gmime_parser.html#g_mime_parser_get_respect_content_length,ptr.GMimeParser	proc g_mime_parser_get_respect_content_length(parser: ptr GMimeParser): gboolean		46
-nim	g_mime_parser_set_respect_content_length	gmime/bindings/gmime_parser.html#g_mime_parser_set_respect_content_length,ptr.GMimeParser,gboolean	proc g_mime_parser_set_respect_content_length(parser: ptr GMimeParser;\n    respect_content_length: gboolean)		47
-nim	g_mime_parser_set_header_regex	gmime/bindings/gmime_parser.html#g_mime_parser_set_header_regex,ptr.GMimeParser,cstring,GMimeParserHeaderRegexFunc,pointer	proc g_mime_parser_set_header_regex(parser: ptr GMimeParser; regex: cstring;\n                               header_cb: GMimeParserHeaderRegexFunc;\n                               user_data: pointer)		49
-nim	g_mime_parser_construct_part	gmime/bindings/gmime_parser.html#g_mime_parser_construct_part,ptr.GMimeParser,ptr.GMimeParserOptions	proc g_mime_parser_construct_part(parser: ptr GMimeParser;\n                             options: ptr GMimeParserOptions): ptr GMimeObject		51
-nim	g_mime_parser_construct_message	gmime/bindings/gmime_parser.html#g_mime_parser_construct_message,ptr.GMimeParser,ptr.GMimeParserOptions	proc g_mime_parser_construct_message(parser: ptr GMimeParser;\n                                options: ptr GMimeParserOptions): ptr GMimeMessage		52
-nim	g_mime_parser_tell	gmime/bindings/gmime_parser.html#g_mime_parser_tell,ptr.GMimeParser	proc g_mime_parser_tell(parser: ptr GMimeParser): gint64		54
-nim	g_mime_parser_eos	gmime/bindings/gmime_parser.html#g_mime_parser_eos,ptr.GMimeParser	proc g_mime_parser_eos(parser: ptr GMimeParser): gboolean		56
-nim	g_mime_parser_get_mbox_marker	gmime/bindings/gmime_parser.html#g_mime_parser_get_mbox_marker,ptr.GMimeParser	proc g_mime_parser_get_mbox_marker(parser: ptr GMimeParser): cstring		58
-nim	g_mime_parser_get_mbox_marker_offset	gmime/bindings/gmime_parser.html#g_mime_parser_get_mbox_marker_offset,ptr.GMimeParser	proc g_mime_parser_get_mbox_marker_offset(parser: ptr GMimeParser): gint64		59
-nim	g_mime_parser_get_headers_begin	gmime/bindings/gmime_parser.html#g_mime_parser_get_headers_begin,ptr.GMimeParser	proc g_mime_parser_get_headers_begin(parser: ptr GMimeParser): gint64		61
-nim	g_mime_parser_get_headers_end	gmime/bindings/gmime_parser.html#g_mime_parser_get_headers_end,ptr.GMimeParser	proc g_mime_parser_get_headers_end(parser: ptr GMimeParser): gint64		62
+nim	g_mime_parser_get_type	gmime/bindings/gmime_parser.html#g_mime_parser_get_type	proc g_mime_parser_get_type(): GType		32
+nim	g_mime_parser_new	gmime/bindings/gmime_parser.html#g_mime_parser_new	proc g_mime_parser_new(): ptr GMimeParser		34
+nim	g_mime_parser_new_with_stream	gmime/bindings/gmime_parser.html#g_mime_parser_new_with_stream,ptr.GMimeStream	proc g_mime_parser_new_with_stream(stream: ptr GMimeStream): ptr GMimeParser		35
+nim	g_mime_parser_init_with_stream	gmime/bindings/gmime_parser.html#g_mime_parser_init_with_stream,ptr.GMimeParser,ptr.GMimeStream	proc g_mime_parser_init_with_stream(parser: ptr GMimeParser; stream: ptr GMimeStream)		37
+nim	g_mime_parser_get_persist_stream	gmime/bindings/gmime_parser.html#g_mime_parser_get_persist_stream,ptr.GMimeParser	proc g_mime_parser_get_persist_stream(parser: ptr GMimeParser): gboolean		39
+nim	g_mime_parser_set_persist_stream	gmime/bindings/gmime_parser.html#g_mime_parser_set_persist_stream,ptr.GMimeParser,gboolean	proc g_mime_parser_set_persist_stream(parser: ptr GMimeParser; persist: gboolean)		40
+nim	g_mime_parser_get_format	gmime/bindings/gmime_parser.html#g_mime_parser_get_format,ptr.GMimeParser	proc g_mime_parser_get_format(parser: ptr GMimeParser): GMimeFormat		42
+nim	g_mime_parser_set_format	gmime/bindings/gmime_parser.html#g_mime_parser_set_format,ptr.GMimeParser,GMimeFormat	proc g_mime_parser_set_format(parser: ptr GMimeParser; format: GMimeFormat)		43
+nim	g_mime_parser_get_respect_content_length	gmime/bindings/gmime_parser.html#g_mime_parser_get_respect_content_length,ptr.GMimeParser	proc g_mime_parser_get_respect_content_length(parser: ptr GMimeParser): gboolean		45
+nim	g_mime_parser_set_respect_content_length	gmime/bindings/gmime_parser.html#g_mime_parser_set_respect_content_length,ptr.GMimeParser,gboolean	proc g_mime_parser_set_respect_content_length(parser: ptr GMimeParser;\n    respect_content_length: gboolean)		46
+nim	g_mime_parser_set_header_regex	gmime/bindings/gmime_parser.html#g_mime_parser_set_header_regex,ptr.GMimeParser,cstring,GMimeParserHeaderRegexFunc,pointer	proc g_mime_parser_set_header_regex(parser: ptr GMimeParser; regex: cstring;\n                               header_cb: GMimeParserHeaderRegexFunc;\n                               user_data: pointer)		48
+nim	g_mime_parser_construct_part	gmime/bindings/gmime_parser.html#g_mime_parser_construct_part,ptr.GMimeParser,ptr.GMimeParserOptions	proc g_mime_parser_construct_part(parser: ptr GMimeParser;\n                             options: ptr GMimeParserOptions): ptr GMimeObject		50
+nim	g_mime_parser_construct_message	gmime/bindings/gmime_parser.html#g_mime_parser_construct_message,ptr.GMimeParser,ptr.GMimeParserOptions	proc g_mime_parser_construct_message(parser: ptr GMimeParser;\n                                options: ptr GMimeParserOptions): ptr GMimeMessage		51
+nim	g_mime_parser_tell	gmime/bindings/gmime_parser.html#g_mime_parser_tell,ptr.GMimeParser	proc g_mime_parser_tell(parser: ptr GMimeParser): gint64		53
+nim	g_mime_parser_eos	gmime/bindings/gmime_parser.html#g_mime_parser_eos,ptr.GMimeParser	proc g_mime_parser_eos(parser: ptr GMimeParser): gboolean		55
+nim	g_mime_parser_get_mbox_marker	gmime/bindings/gmime_parser.html#g_mime_parser_get_mbox_marker,ptr.GMimeParser	proc g_mime_parser_get_mbox_marker(parser: ptr GMimeParser): cstring		57
+nim	g_mime_parser_get_mbox_marker_offset	gmime/bindings/gmime_parser.html#g_mime_parser_get_mbox_marker_offset,ptr.GMimeParser	proc g_mime_parser_get_mbox_marker_offset(parser: ptr GMimeParser): gint64		58
+nim	g_mime_parser_get_headers_begin	gmime/bindings/gmime_parser.html#g_mime_parser_get_headers_begin,ptr.GMimeParser	proc g_mime_parser_get_headers_begin(parser: ptr GMimeParser): gint64		60
+nim	g_mime_parser_get_headers_end	gmime/bindings/gmime_parser.html#g_mime_parser_get_headers_end,ptr.GMimeParser	proc g_mime_parser_get_headers_end(parser: ptr GMimeParser): gint64		61
