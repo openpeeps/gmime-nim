@@ -1,12 +1,12 @@
 nimTitle	gmime_internet_address	gmime/bindings/gmime_internet_address.html	module gmime/bindings/gmime_internet_address		0
-nim	InternetAddress	gmime/bindings/gmime_internet_address.html#InternetAddress	object InternetAddress		13
-nim	InternetAddressClass	gmime/bindings/gmime_internet_address.html#InternetAddressClass	object InternetAddressClass		19
-nim	InternetAddressMailbox	gmime/bindings/gmime_internet_address.html#InternetAddressMailbox	object InternetAddressMailbox		23
-nim	InternetAddressMailboxClass	gmime/bindings/gmime_internet_address.html#InternetAddressMailboxClass	object InternetAddressMailboxClass		29
-nim	InternetAddressGroup	gmime/bindings/gmime_internet_address.html#InternetAddressGroup	object InternetAddressGroup		32
-nim	InternetAddressGroupClass	gmime/bindings/gmime_internet_address.html#InternetAddressGroupClass	object InternetAddressGroupClass		36
-nim	InternetAddressList	gmime/bindings/gmime_internet_address.html#InternetAddressList	object InternetAddressList		39
-nim	InternetAddressListClass	gmime/bindings/gmime_internet_address.html#InternetAddressListClass	object InternetAddressListClass		44
+nim	InternetAddress	gmime/bindings/gmime_internet_address.html#InternetAddress	object InternetAddress		14
+nim	InternetAddressClass	gmime/bindings/gmime_internet_address.html#InternetAddressClass	object InternetAddressClass		20
+nim	InternetAddressMailbox	gmime/bindings/gmime_internet_address.html#InternetAddressMailbox	object InternetAddressMailbox		24
+nim	InternetAddressMailboxClass	gmime/bindings/gmime_internet_address.html#InternetAddressMailboxClass	object InternetAddressMailboxClass		30
+nim	InternetAddressGroup	gmime/bindings/gmime_internet_address.html#InternetAddressGroup	object InternetAddressGroup		33
+nim	InternetAddressGroupClass	gmime/bindings/gmime_internet_address.html#InternetAddressGroupClass	object InternetAddressGroupClass		37
+nim	InternetAddressList	gmime/bindings/gmime_internet_address.html#InternetAddressList	object InternetAddressList		40
+nim	InternetAddressListClass	gmime/bindings/gmime_internet_address.html#InternetAddressListClass	object InternetAddressListClass		45
 nim	internet_address_get_type	gmime/bindings/gmime_internet_address.html#internet_address_get_type	proc internet_address_get_type(): GType		49
 nim	internet_address_set_name	gmime/bindings/gmime_internet_address.html#internet_address_set_name,ptr.InternetAddress,cstring	proc internet_address_set_name(ia: ptr InternetAddress; name: cstring)		51
 nim	internet_address_get_name	gmime/bindings/gmime_internet_address.html#internet_address_get_name,ptr.InternetAddress	proc internet_address_get_name(ia: ptr InternetAddress): cstring		52

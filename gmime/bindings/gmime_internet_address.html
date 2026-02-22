@@ -58,16 +58,23 @@
   <details open>
     <summary><a class="reference reference-toplevel" href="#7" id="57">Types</a></summary>
     <ul class="simple simple-toc-section">
-      <li><a class="reference" href="#InternetAddress" title="InternetAddress = object">InternetAddress</a></li>
-<li><a class="reference" href="#InternetAddressClass" title="InternetAddressClass = object
+      <li><a class="reference" href="#InternetAddress" title="InternetAddress {.byCopy.} = object
+  parent_object*: pointer
+  charset*: cstring
+  name*: cstring
+  changed*: pointer">InternetAddress</a></li>
+<li><a class="reference" href="#InternetAddressClass" title="InternetAddressClass {.byCopy.} = object
   to_string*: proc (ia: ptr InternetAddress; options: ptr GMimeFormatOptions;
                     flags: guint32; linelen: ptr csize_t; str: pointer)">InternetAddressClass</a></li>
-<li><a class="reference" href="#InternetAddressGroup" title="InternetAddressGroup = object">InternetAddressGroup</a></li>
-<li><a class="reference" href="#InternetAddressGroupClass" title="InternetAddressGroupClass = object">InternetAddressGroupClass</a></li>
-<li><a class="reference" href="#InternetAddressList" title="InternetAddressList = object">InternetAddressList</a></li>
-<li><a class="reference" href="#InternetAddressListClass" title="InternetAddressListClass = object">InternetAddressListClass</a></li>
-<li><a class="reference" href="#InternetAddressMailbox" title="InternetAddressMailbox = object">InternetAddressMailbox</a></li>
-<li><a class="reference" href="#InternetAddressMailboxClass" title="InternetAddressMailboxClass = object">InternetAddressMailboxClass</a></li>
+<li><a class="reference" href="#InternetAddressGroup" title="InternetAddressGroup {.byCopy.} = object">InternetAddressGroup</a></li>
+<li><a class="reference" href="#InternetAddressGroupClass" title="InternetAddressGroupClass {.byCopy.} = object">InternetAddressGroupClass</a></li>
+<li><a class="reference" href="#InternetAddressList" title="InternetAddressList {.byCopy.} = object">InternetAddressList</a></li>
+<li><a class="reference" href="#InternetAddressListClass" title="InternetAddressListClass {.byCopy.} = object">InternetAddressListClass</a></li>
+<li><a class="reference" href="#InternetAddressMailbox" title="InternetAddressMailbox {.byCopy.} = object
+  parent_object*: InternetAddress
+  idn_addr*: cstring
+  at*: int">InternetAddressMailbox</a></li>
+<li><a class="reference" href="#InternetAddressMailboxClass" title="InternetAddressMailboxClass {.byCopy.} = object">InternetAddressMailboxClass</a></li>
 
     </ul>
   </details>
@@ -265,7 +272,11 @@
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="InternetAddress">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddress"><span class="Identifier">InternetAddress</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddress"><span class="Identifier">InternetAddress</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">parent_object</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">pointer</span>
+  <span class="Identifier">charset</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
+  <span class="Identifier">name</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
+  <span class="Identifier">changed</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">pointer</span></pre></dt>
   <dd>
     
     
@@ -273,7 +284,7 @@
   </dd>
 </div>
 <div id="InternetAddressClass">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddressClass"><span class="Identifier">InternetAddressClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddressClass"><span class="Identifier">InternetAddressClass</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">to_string</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">proc</span> <span class="Other">(</span><span class="Identifier">ia</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="gmime_internet_address.html#InternetAddress"><span class="Identifier">InternetAddress</span></a><span class="Other">;</span> <span class="Identifier">options</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="gmime_format_options.html#GMimeFormatOptions"><span class="Identifier">GMimeFormatOptions</span></a><span class="Other">;</span>
                     <span class="Identifier">flags</span><span class="Other">:</span> <a href="glib.html#guint32"><span class="Identifier">guint32</span></a><span class="Other">;</span> <span class="Identifier">linelen</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">csize_t</span><span class="Other">;</span> <span class="Identifier">str</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">)</span></pre></dt>
   <dd>
@@ -283,7 +294,7 @@
   </dd>
 </div>
 <div id="InternetAddressGroup">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddressGroup"><span class="Identifier">InternetAddressGroup</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddressGroup"><span class="Identifier">InternetAddressGroup</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -291,7 +302,7 @@
   </dd>
 </div>
 <div id="InternetAddressGroupClass">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddressGroupClass"><span class="Identifier">InternetAddressGroupClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddressGroupClass"><span class="Identifier">InternetAddressGroupClass</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -299,7 +310,7 @@
   </dd>
 </div>
 <div id="InternetAddressList">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddressList"><span class="Identifier">InternetAddressList</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -307,7 +318,7 @@
   </dd>
 </div>
 <div id="InternetAddressListClass">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddressListClass"><span class="Identifier">InternetAddressListClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddressListClass"><span class="Identifier">InternetAddressListClass</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -315,7 +326,10 @@
   </dd>
 </div>
 <div id="InternetAddressMailbox">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddressMailbox"><span class="Identifier">InternetAddressMailbox</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddressMailbox"><span class="Identifier">InternetAddressMailbox</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">parent_object</span><span class="Operator">*</span><span class="Other">:</span> <a href="gmime_internet_address.html#InternetAddress"><span class="Identifier">InternetAddress</span></a>
+  <span class="Identifier">idn_addr</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">cstring</span>
+  <span class="Identifier">at</span><span class="Operator">*</span><span class="Other">:</span> <span class="Identifier">int</span></pre></dt>
   <dd>
     
     
@@ -323,7 +337,7 @@
   </dd>
 </div>
 <div id="InternetAddressMailboxClass">
-  <dt><pre><a href="gmime_internet_address.html#InternetAddressMailboxClass"><span class="Identifier">InternetAddressMailboxClass</span></a> <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
+  <dt><pre><a href="gmime_internet_address.html#InternetAddressMailboxClass"><span class="Identifier">InternetAddressMailboxClass</span></a> {.<span class="Identifier">byCopy</span>.} <span class="Other">=</span> <span class="Keyword">object</span></pre></dt>
   <dd>
     
     
@@ -772,7 +786,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 18:29:44 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 18:45:57 UTC</small>
       </div>
     </div>
   </div>
