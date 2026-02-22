@@ -12,10 +12,22 @@
   <img src="https://github.com/openpeeps/gmime-nim/workflows/test/badge.svg" alt="Github Actions">  <img src="https://github.com/openpeeps/gmime-nim/workflows/docs/badge.svg" alt="Github Actions">
 </p>
 
+### What is GMime?
+GMime is a C/C++ library which may be used for the creation and parsing of messages using the Multipurpose Internet Mail Extension (MIME) as defined by [numerous IETF specifications](https://github.com/jstedfast/gmime/blob/master/RFCs.md).
+
+GMime features an extremely robust high-performance parser designed to be able to preserve byte-for-byte information allowing developers to re-seralize the parsed messages back to a stream exactly as the parser found them. It also features integrated GnuPG and S/MIME v3.2 support.
+
+👉 Read more about GMime on the [official repository](https://github.com/jstedfast/gmime).
+
 ## 😍 Key Features
 - [x] Low-level bindings to the GMime library
 - [ ] High-level API for easier usage (coming soon)
 - [x] Written in Nim language
+
+### Prerequisites
+- GLib >= 2.68.0
+- GMime >= 3.2.15
+- Nim >= 2.0.0
 
 ## Examples
 ...
