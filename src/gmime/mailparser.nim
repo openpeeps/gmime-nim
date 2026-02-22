@@ -37,7 +37,7 @@ proc close*(parser: ptr GMimeParser) =
 #
 # Message 
 #
-import gmime/bindings/gmime_message
+import ./bindings/gmime_message
 
 proc constructMessage*(parser: ptr GMimeParser): ptr GMimeMessage =
   ## Constructs a GMimeMessage from the given parser.
