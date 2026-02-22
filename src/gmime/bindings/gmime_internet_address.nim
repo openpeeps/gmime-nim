@@ -9,43 +9,43 @@ import ./gmime_format_options
 import ./gmime_parser_options
 
 # Type definitions
+{.push importc, cdecl, header: "gmime/gmime.h".}
 type
-  InternetAddress* = object
-    parent_object: pointer # GObject, to be imported later
-    charset: cstring
-    name: cstring
-    changed: pointer
+  InternetAddress* {.byCopy.} = object
+    parent_object*: pointer # GObject, to be imported later
+    charset*: cstring
+    name*: cstring
+    changed*: pointer
 
-  InternetAddressClass* = object
+  InternetAddressClass* {.byCopy.} = object
     parent_class: pointer # GObjectClass, to be imported later
     to_string*: proc(ia: ptr InternetAddress, options: ptr GMimeFormatOptions, flags: guint32, linelen: ptr csize_t, str: pointer) # GString
 
-  InternetAddressMailbox* = object
-    parent_object: InternetAddress
-    idn_addr: cstring
-    `addr`: cstring
-    at: int
+  InternetAddressMailbox* {.byCopy.} = object
+    parent_object*: InternetAddress
+    idn_addr*: cstring
+    `addr`*: cstring
+    at*: int
 
-  InternetAddressMailboxClass* = object
+  InternetAddressMailboxClass* {.byCopy.} = object
     parent_class: InternetAddressClass
 
-  InternetAddressGroup* = object
+  InternetAddressGroup* {.byCopy.} = object
     parent_object: InternetAddress
     members: ptr InternetAddressList
 
-  InternetAddressGroupClass* = object
+  InternetAddressGroupClass* {.byCopy.} = object
     parent_class: InternetAddressClass
 
-  InternetAddressList* = object
+  InternetAddressList* {.byCopy.} = object
     parent_object: pointer # GObject, to be imported later
     `array`: pointer # GPtrArray, to be imported later
     changed: pointer
 
-  InternetAddressListClass* = object
+  InternetAddressListClass* {.byCopy.} = object
     parent_class: pointer # GObjectClass, to be imported later
 
 # Function declarations
-{.push importc, cdecl, header: "gmime/gmime.h".}
 proc internet_address_get_type*(): GType
 
 proc internet_address_set_name*(ia: ptr InternetAddress, name: cstring)
