@@ -13,6 +13,7 @@ import ./gmime_autocrypt
 import ./gmime_crypto_context
 import ./glib
 
+{.push importc, cdecl, header: "gmime/gmime.h".}
 # Enum definitions
 type
   GMimeAddressType* = enum
@@ -25,7 +26,7 @@ type
 
 # Type definitions
 type
-  GMimeMessage* = object
+  GMimeMessage* {.byCopy.} = object
     parent_object: GMimeObject
     addrlists: ptr ptr InternetAddressList
     mime_part: ptr GMimeObject
@@ -34,13 +35,12 @@ type
     subject: cstring
     marker: cstring
 
-  GMimeMessageClass* = object
+  GMimeMessageClass* {.byCopy.} = object
     parent_class: GMimeObjectClass
 
   GMimeObjectForeachFunc* = proc(obj: ptr GMimeObject, user_data: pointer)
 
 # Function declarations
-{.push importc, cdecl, header: "gmime/gmime.h".}
 proc g_mime_message_get_type*(): GType
 proc g_mime_message_new*(pretty_headers: gboolean): ptr GMimeMessage
 proc g_mime_message_get_from*(message: ptr GMimeMessage): ptr InternetAddressList

@@ -3,9 +3,13 @@
 # (c) 2026 George Lemon | MIT License
 #          Made by Humans from OpenPeeps
 #          https://github.com/openpeeps/gmime-nim
-import std/[times, options]
+import std/[times, strutils, options]
 
-import ./bindings/[glib, gmime_parser, gmime_parser_options, gmime_stream_fs]
+import ./bindings/[glib, gmime_parser, gmime_parser_options,
+            gmime_stream_mem, gmime_stream_fs, gmime_object,
+            gmime_content_type, gmime_format_options, gmime_part_iter,
+            gmime_part, gmime_data_wrapper, gmime_multipart]
+
 import ./internet_address
 
 type
@@ -74,6 +78,112 @@ proc getSubject*(message: ptr GMimeMessage): string =
 proc hasSubject*(message: ptr GMimeMessage): bool =
   ## Checks if the email message has a subject.
   g_mime_message_get_subject(message).len > 0
+
+# proc removeAttachments*(message: ptr GMimeMessage): int =
+#   ## Removes attachment parts from multipart parents.
+#   if message == nil:
+#     return 0
+
+#   let iter = g_mime_part_iter_new(cast[ptr GMimeObject](message))
+#   if iter == nil:
+#     return 0
+#   defer:
+#     g_mime_part_iter_free(iter)
+
+#   let attachments = g_ptr_array_new()
+#   let multiparts = g_ptr_array_new()
+#   if attachments == nil or multiparts == nil:
+#     if attachments != nil: discard g_ptr_array_free(attachments, 1)
+#     if multiparts != nil: discard g_ptr_array_free(multiparts, 1)
+#     return 0
+#   defer:
+#     discard g_ptr_array_free(attachments, 1)
+#     discard g_ptr_array_free(multiparts, 1)
+
+#   # collect our list of attachments and their parent multiparts
+#   while g_mime_part_iter_next(iter) != 0:
+#     let current = g_mime_part_iter_get_current(iter)
+#     let parent = g_mime_part_iter_get_parent(iter)
+
+#     if parent != nil and current != nil and
+#        g_type_check_instance_is_a(cast[pointer](parent), g_mime_multipart_get_type()) != 0 and
+#        g_type_check_instance_is_a(cast[pointer](current), g_mime_part_get_type()) != 0:
+
+#       let part = cast[ptr GMimePart](current)
+#       if g_mime_part_is_attachment(part) != 0:
+#         g_ptr_array_add(multiparts, cast[pointer](parent))
+#         g_ptr_array_add(attachments, cast[pointer](part))
+
+#   # now remove each attachment from its parent multipart
+#   for i in 0 ..< int(attachments.len):
+#     let multipart = cast[ptr GMimeMultipart](attachments[].pdata[i]) # fixed below
+#     discard multipart
+
+#   # correct removal loop
+#   for i in 0 ..< int(attachments.len):
+#     let multipart = cast[ptr GMimeMultipart](multiparts[].pdata[i])
+#     let attachment = cast[ptr GMimeObject](attachments[].pdata[i])
+#     if g_mime_multipart_remove(multipart, attachment) != 0:
+#       inc result
+
+proc partContentToString(part: ptr GMimePart): string =
+  let content = g_mime_part_get_content(part)
+  if content == nil: return # empty string
+  
+  let stream = g_mime_stream_mem_new()
+  if stream == nil: return # empty string
+
+  defer:
+    g_object_unref(stream)
+
+  let wrote = g_mime_data_wrapper_write_to_stream(content, stream)
+  if wrote <= 0: return # empty string
+
+  let ba = g_mime_stream_mem_get_byte_array(cast[ptr GMimeStreamMem](stream))
+  if ba == nil or ba.data == nil or ba.len == 0: return # empty string
+  let n = int(ba.len)
+  if n <= 0 or n > 10_000_000: return # empty string, sanity check to prevent OOM
+  result = newString(n)
+  copyMem(addr result[0], ba.data, n)
+
+proc getTextParts(message: ptr GMimeMessage,
+              parts: var seq[string], plainTextOnly: bool) =
+  # Collect all non-attachment text/plain + text/html parts.
+  if message == nil: return
+  let root = g_mime_message_get_mime_part(message)
+  if root == nil: return
+
+  # we use a part iterator to traverse the MIME tree, which is more
+  # efficient than recursion and avoids stack overflow on deeply nested messages
+  let iter = g_mime_part_iter_new(root)
+  if iter == nil: return 
+  defer:
+    g_mime_part_iter_free(iter)
+  var steps = 0
+  while true:
+    inc steps
+    if steps > 10000: break # sanity check to prevent infinite loops on malformed messages
+    let current = g_mime_part_iter_get_current(iter)
+    if current != nil and
+       g_type_check_instance_is_a(cast[pointer](current), g_mime_part_get_type()) != 0:
+      let part = cast[ptr GMimePart](current)
+      if g_mime_part_is_attachment(part) == 0:
+        let ctype = g_mime_object_get_content_type(current)
+        # we only want text parts that are not attachments,
+        # and if `plainTextOnly` is true, we only want `text/plain` parts,
+        # otherwise we also allow `text/html`
+        if ctype != nil and (g_mime_content_type_is_type(ctype, "text", "plain") != 0 or
+          (plainTextOnly == false and g_mime_content_type_is_type(ctype, "text", "html") != 0)):
+          let s = partContentToString(part)
+          if s.len > 0: parts.add(s)
+    if g_mime_part_iter_next(iter) == 0: break # no more parts to iterate
+
+proc getBody*(message: ptr GMimeMessage, plainTextOnly = false): string =
+  ## Returns all collected text parts joined with a blank line.
+  var parts: seq[string]
+  message.getTextParts(parts, plainTextOnly)
+  result = parts.join("\n\n")
+
 
 proc getFromList*(message: ptr GMimeMessage): ptr InternetAddressList =
   ## Retrieves the list of sender addresses from the email message.

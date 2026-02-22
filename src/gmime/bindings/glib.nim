@@ -32,11 +32,6 @@ type
   GBytes* = object
     dummy: array[16, byte] # Size can vary; 16 bytes is a common minimum
 
-  GPtrArray* = object
-    pdata*: ptr pointer
-    len*: guint
-    alloc: guint
-
   GHashTable* = object
     dummy: array[16, byte] # Size can vary; 16 bytes is a common minimum
 
@@ -55,9 +50,25 @@ type
   gconstpointer* = pointer
   ssize_t* = clong
   gbpointer* = pointer
+  guint8* = uint8
 
 {.push cdecl, importc, header: "glib-object.h".}
+type
+
+  GPtrArray* {.incompleteStruct.} = object
+    pdata*: ptr pointer
+    len*: guint
+    alloc: guint
+
+  GByteArray* {.incompleteStruct.} = object
+    data*: ptr guint8
+    len*: guint
+
 proc g_object_unref*(obj: pointer)
+proc g_type_check_instance_is_a*(instance: pointer, iface_type: GType): gboolean
+proc g_ptr_array_new*(): ptr GPtrArray
+proc g_ptr_array_add*(array: ptr GPtrArray, data: pointer)
+proc g_ptr_array_free*(array: ptr GPtrArray, free_seg: gboolean): pointer
 {.pop.}
 
 {.push cdecl, importc, header: "glib.h".}

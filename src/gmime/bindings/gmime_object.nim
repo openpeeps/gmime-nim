@@ -15,9 +15,10 @@ import ./gmime_header
 import ./gmime_autocrypt
 import ./gmime_internet_address
 
+{.push importc, cdecl, header: "gmime/gmime.h".}
 # Type definitions
 type
-  GMimeObject* = object
+  GMimeObject* {.byCopy.} = object
     parent_object: pointer # GObject, to be imported later
     disposition: GMimeContentDisposition
     content_type: GMimeContentType
@@ -25,7 +26,7 @@ type
     content_id: cstring
     ensure_newline: gboolean
 
-  GMimeObjectClass* = object
+  GMimeObjectClass* {.byCopy.} = object
     parent_class: pointer # GObjectClass, to be imported later
     header_added*: proc(obj: ptr GMimeObject, header: ptr GMimeHeader)
     header_changed*: proc(obj: ptr GMimeObject, header: ptr GMimeHeader)
@@ -36,20 +37,17 @@ type
     write_to_stream*: proc(obj: ptr GMimeObject, options: GMimeFormatOptions, content_only: gboolean, stream: GMimeStream): ssize_t
     encode*: proc(obj: ptr GMimeObject, constraint: int) # GMimeEncodingConstraint
 
-# Callback type
-type
   GMimeObjectForeachFunc* = proc(parent: ptr GMimeObject, part: ptr GMimeObject, user_data: pointer)
 
 # Function declarations
-{.push importc, cdecl, header: "gmime/gmime.h".}
 proc g_mime_object_get_type*(): GType
 proc g_mime_object_register_type*(typeStr: cstring, subtype: cstring, object_type: GType)
 
-proc g_mime_object_new*(options: GMimeParserOptions, content_type: GMimeContentType): ptr GMimeObject
+proc g_mime_object_new*(options: GMimeParserOptions, content_type: ptr GMimeContentType): ptr GMimeObject
 proc g_mime_object_new_type*(options: GMimeParserOptions, typeStr: cstring, subtype: cstring): ptr GMimeObject
 
-proc g_mime_object_set_content_type*(obj: ptr GMimeObject, content_type: GMimeContentType)
-proc g_mime_object_get_content_type*(obj: ptr GMimeObject): GMimeContentType
+proc g_mime_object_set_content_type*(obj: ptr GMimeObject, content_type: ptr GMimeContentType)
+proc g_mime_object_get_content_type*(obj: ptr GMimeObject): ptr GMimeContentType
 proc g_mime_object_set_content_type_parameter*(obj: ptr GMimeObject, name: cstring, value: cstring)
 proc g_mime_object_get_content_type_parameter*(obj: ptr GMimeObject, name: cstring): cstring
 
@@ -73,11 +71,11 @@ proc g_mime_object_remove_header*(obj: ptr GMimeObject, header: cstring): gboole
 
 proc g_mime_object_get_header_list*(obj: ptr GMimeObject): GMimeHeaderList
 
-proc g_mime_object_get_headers*(obj: ptr GMimeObject, options: GMimeFormatOptions): cstring
+proc g_mime_object_get_headers*(obj: ptr GMimeObject, options: ptr GMimeFormatOptions): cstring
 
-proc g_mime_object_write_to_stream*(obj: ptr GMimeObject, options: GMimeFormatOptions, stream: GMimeStream): ssize_t
-proc g_mime_object_write_content_to_stream*(obj: ptr GMimeObject, options: GMimeFormatOptions, stream: GMimeStream): ssize_t
-proc g_mime_object_to_string*(obj: ptr GMimeObject, options: GMimeFormatOptions): cstring
+proc g_mime_object_write_to_stream*(obj: ptr GMimeObject, options: ptr GMimeFormatOptions, stream: ptr GMimeStream): ssize_t
+proc g_mime_object_write_content_to_stream*(obj: ptr GMimeObject, options: ptr GMimeFormatOptions, stream: ptr GMimeStream): ssize_t
+proc g_mime_object_to_string*(obj: ptr GMimeObject, options: ptr GMimeFormatOptions): cstring
 
 proc g_mime_object_encode*(obj: ptr GMimeObject, constraint: int) # GMimeEncodingConstraint
 
