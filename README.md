@@ -1,5 +1,5 @@
 <p align="center">
-  Bindings for 👑 Nim bindings<br>
+  Bindings for 👑 Nim language<br>
   <a href="https://github.com/jstedfast/gmime">GMime</a> is a powerful library for parsing & creating MIME messages.
 </p>
 
