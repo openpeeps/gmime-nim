@@ -1,0 +1,11 @@
+nimTitle	gmime_stream_mem	gmime/bindings/gmime_stream_mem.html	module gmime/bindings/gmime_stream_mem		0
+nim	GMimeStreamMem	gmime/bindings/gmime_stream_mem.html#GMimeStreamMem	object GMimeStreamMem		12
+nim	GMimeStreamMemClass	gmime/bindings/gmime_stream_mem.html#GMimeStreamMemClass	object GMimeStreamMemClass		17
+nim	g_mime_stream_mem_get_type	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_get_type	proc g_mime_stream_mem_get_type(): GType		20
+nim	g_mime_stream_mem_new	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_new	proc g_mime_stream_mem_new(): ptr GMimeStream		22
+nim	g_mime_stream_mem_new_with_byte_array	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_new_with_byte_array,ptr.GByteArray	proc g_mime_stream_mem_new_with_byte_array(array: ptr GByteArray): ptr GMimeStream		23
+nim	g_mime_stream_mem_new_with_buffer	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_new_with_buffer,cstring,csize_t	proc g_mime_stream_mem_new_with_buffer(buffer: cstring; len: csize_t): ptr GMimeStream		24
+nim	g_mime_stream_mem_get_byte_array	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_get_byte_array,ptr.GMimeStreamMem	proc g_mime_stream_mem_get_byte_array(mem: ptr GMimeStreamMem): ptr GByteArray		26
+nim	g_mime_stream_mem_set_byte_array	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_set_byte_array,ptr.GMimeStreamMem,ptr.GByteArray	proc g_mime_stream_mem_set_byte_array(mem: ptr GMimeStreamMem; array: ptr GByteArray)		27
+nim	g_mime_stream_mem_get_owner	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_get_owner,ptr.GMimeStreamMem	proc g_mime_stream_mem_get_owner(mem: ptr GMimeStreamMem): gboolean		29
+nim	g_mime_stream_mem_set_owner	gmime/bindings/gmime_stream_mem.html#g_mime_stream_mem_set_owner,ptr.GMimeStreamMem,gboolean	proc g_mime_stream_mem_set_owner(mem: ptr GMimeStreamMem; owner: gboolean)		30

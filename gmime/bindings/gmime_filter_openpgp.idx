@@ -1,0 +1,11 @@
+nimTitle	gmime_filter_openpgp	gmime/bindings/gmime_filter_openpgp.html	module gmime/bindings/gmime_filter_openpgp		0
+nim	GMimeOpenPGPData	gmime/bindings/gmime_filter_openpgp.html#GMimeOpenPGPData	enum GMimeOpenPGPData		13
+nim	GMimeOpenPGPState	gmime/bindings/gmime_filter_openpgp.html#GMimeOpenPGPState	enum GMimeOpenPGPState		20
+nim	GMimeOpenPGPMarker	gmime/bindings/gmime_filter_openpgp.html#GMimeOpenPGPMarker	object GMimeOpenPGPMarker		32
+nim	GMimeFilterOpenPGP	gmime/bindings/gmime_filter_openpgp.html#GMimeFilterOpenPGP	object GMimeFilterOpenPGP		39
+nim	GMimeFilterOpenPGPClass	gmime/bindings/gmime_filter_openpgp.html#GMimeFilterOpenPGPClass	object GMimeFilterOpenPGPClass		49
+nim	g_mime_filter_openpgp_get_type	gmime/bindings/gmime_filter_openpgp.html#g_mime_filter_openpgp_get_type	proc g_mime_filter_openpgp_get_type(): GType		52
+nim	g_mime_filter_openpgp_new	gmime/bindings/gmime_filter_openpgp.html#g_mime_filter_openpgp_new	proc g_mime_filter_openpgp_new(): ptr GMimeFilter		53
+nim	g_mime_filter_openpgp_get_data_type	gmime/bindings/gmime_filter_openpgp.html#g_mime_filter_openpgp_get_data_type,ptr.GMimeFilterOpenPGP	proc g_mime_filter_openpgp_get_data_type(openpgp: ptr GMimeFilterOpenPGP): GMimeOpenPGPData		55
+nim	g_mime_filter_openpgp_get_begin_offset	gmime/bindings/gmime_filter_openpgp.html#g_mime_filter_openpgp_get_begin_offset,ptr.GMimeFilterOpenPGP	proc g_mime_filter_openpgp_get_begin_offset(openpgp: ptr GMimeFilterOpenPGP): gint64		56
+nim	g_mime_filter_openpgp_get_end_offset	gmime/bindings/gmime_filter_openpgp.html#g_mime_filter_openpgp_get_end_offset,ptr.GMimeFilterOpenPGP	proc g_mime_filter_openpgp_get_end_offset(openpgp: ptr GMimeFilterOpenPGP): gint64		57

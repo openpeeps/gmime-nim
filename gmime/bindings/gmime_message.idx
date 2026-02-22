@@ -1,14 +1,14 @@
 nimTitle	gmime_message	gmime/bindings/gmime_message.html	module gmime/bindings/gmime_message		0
-nim	GMIME_ADDRESS_TYPE_SENDER	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_SENDER	GMimeAddressType.GMIME_ADDRESS_TYPE_SENDER		18
-nim	GMIME_ADDRESS_TYPE_FROM	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_FROM	GMimeAddressType.GMIME_ADDRESS_TYPE_FROM		18
-nim	GMIME_ADDRESS_TYPE_REPLY_TO	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_REPLY_TO	GMimeAddressType.GMIME_ADDRESS_TYPE_REPLY_TO		18
-nim	GMIME_ADDRESS_TYPE_TO	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_TO	GMimeAddressType.GMIME_ADDRESS_TYPE_TO		18
-nim	GMIME_ADDRESS_TYPE_CC	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_CC	GMimeAddressType.GMIME_ADDRESS_TYPE_CC		18
-nim	GMIME_ADDRESS_TYPE_BCC	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_BCC	GMimeAddressType.GMIME_ADDRESS_TYPE_BCC		18
-nim	GMimeAddressType	gmime/bindings/gmime_message.html#GMimeAddressType	enum GMimeAddressType		18
-nim	GMimeMessage	gmime/bindings/gmime_message.html#GMimeMessage	object GMimeMessage		28
-nim	GMimeMessageClass	gmime/bindings/gmime_message.html#GMimeMessageClass	object GMimeMessageClass		37
-nim	GMimeObjectForeachFunc	gmime/bindings/gmime_message.html#GMimeObjectForeachFunc	type GMimeObjectForeachFunc		40
+nim	GMIME_ADDRESS_TYPE_SENDER	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_SENDER	GMimeAddressType.GMIME_ADDRESS_TYPE_SENDER		19
+nim	GMIME_ADDRESS_TYPE_FROM	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_FROM	GMimeAddressType.GMIME_ADDRESS_TYPE_FROM		19
+nim	GMIME_ADDRESS_TYPE_REPLY_TO	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_REPLY_TO	GMimeAddressType.GMIME_ADDRESS_TYPE_REPLY_TO		19
+nim	GMIME_ADDRESS_TYPE_TO	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_TO	GMimeAddressType.GMIME_ADDRESS_TYPE_TO		19
+nim	GMIME_ADDRESS_TYPE_CC	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_CC	GMimeAddressType.GMIME_ADDRESS_TYPE_CC		19
+nim	GMIME_ADDRESS_TYPE_BCC	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_BCC	GMimeAddressType.GMIME_ADDRESS_TYPE_BCC		19
+nim	GMimeAddressType	gmime/bindings/gmime_message.html#GMimeAddressType	enum GMimeAddressType		19
+nim	GMimeMessage	gmime/bindings/gmime_message.html#GMimeMessage	object GMimeMessage		29
+nim	GMimeMessageClass	gmime/bindings/gmime_message.html#GMimeMessageClass	object GMimeMessageClass		38
+nim	GMimeObjectForeachFunc	gmime/bindings/gmime_message.html#GMimeObjectForeachFunc	type GMimeObjectForeachFunc		41
 nim	g_mime_message_get_type	gmime/bindings/gmime_message.html#g_mime_message_get_type	proc g_mime_message_get_type(): GType		44
 nim	g_mime_message_new	gmime/bindings/gmime_message.html#g_mime_message_new,gboolean	proc g_mime_message_new(pretty_headers: gboolean): ptr GMimeMessage		45
 nim	g_mime_message_get_from	gmime/bindings/gmime_message.html#g_mime_message_get_from,ptr.GMimeMessage	proc g_mime_message_get_from(message: ptr GMimeMessage): ptr InternetAddressList		46

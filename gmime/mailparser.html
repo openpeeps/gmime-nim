@@ -87,6 +87,10 @@
   <li><a class="reference" href="#getBCCList%2Cptr.GMimeMessage" title="getBCCList(message: ptr GMimeMessage): ptr InternetAddressList">getBCCList(message: ptr GMimeMessage): ptr InternetAddressList</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">getBody
+  <li><a class="reference" href="#getBody%2Cptr.GMimeMessage" title="getBody(message: ptr GMimeMessage; plainTextOnly = false): string">getBody(message: ptr GMimeMessage; plainTextOnly = false): string</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">getCCList
   <li><a class="reference" href="#getCCList%2Cptr.GMimeMessage" title="getCCList(message: ptr GMimeMessage): ptr InternetAddressList">getCCList(message: ptr GMimeMessage): ptr InternetAddressList</a></li>
 
@@ -143,7 +147,7 @@
     <div class="section" id="6">
   <h1><a class="toc-backref" href="#6">Imports</a></h1>
   <dl class="item">
-    <a class="reference external" href="bindings/glib.html">bindings/glib</a>, <a class="reference external" href="bindings/gmime_parser.html">bindings/gmime_parser</a>, <a class="reference external" href="bindings/gmime_parser_options.html">bindings/gmime_parser_options</a>, <a class="reference external" href="bindings/gmime_stream_fs.html">bindings/gmime_stream_fs</a>, <a class="reference external" href="internet_address.html">internet_address</a>, <a class="reference external" href="bindings/gmime_message.html">bindings/gmime_message</a>
+    <a class="reference external" href="bindings/glib.html">bindings/glib</a>, <a class="reference external" href="bindings/gmime_parser.html">bindings/gmime_parser</a>, <a class="reference external" href="bindings/gmime_parser_options.html">bindings/gmime_parser_options</a>, <a class="reference external" href="bindings/gmime_stream_mem.html">bindings/gmime_stream_mem</a>, <a class="reference external" href="bindings/gmime_stream_fs.html">bindings/gmime_stream_fs</a>, <a class="reference external" href="bindings/gmime_object.html">bindings/gmime_object</a>, <a class="reference external" href="bindings/gmime_content_type.html">bindings/gmime_content_type</a>, <a class="reference external" href="bindings/gmime_format_options.html">bindings/gmime_format_options</a>, <a class="reference external" href="bindings/gmime_part_iter.html">bindings/gmime_part_iter</a>, <a class="reference external" href="bindings/gmime_part.html">bindings/gmime_part</a>, <a class="reference external" href="bindings/gmime_data_wrapper.html">bindings/gmime_data_wrapper</a>, <a class="reference external" href="bindings/gmime_multipart.html">bindings/gmime_multipart</a>, <a class="reference external" href="internet_address.html">internet_address</a>, <a class="reference external" href="bindings/gmime_message.html">bindings/gmime_message</a>
   </dl>
 </div>
 <div class="section" id="7">
@@ -217,6 +221,18 @@
   <dd>
     
     Retrieves the list of BCC (blind carbon copy) addresses from the email message.
+    
+  </dd>
+</div>
+
+</div>
+<div id="getBody-procs-all">
+  <div id="getBody,ptr.GMimeMessage">
+  <dt><pre><span class="Keyword">proc</span> <a href="#getBody%2Cptr.GMimeMessage"><span class="Identifier">getBody</span></a><span class="Other">(</span><span class="Identifier">message</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="bindings/gmime_message.html#GMimeMessage"><span class="Identifier">GMimeMessage</span></a><span class="Other">;</span> <span class="Identifier">plainTextOnly</span> <span class="Other">=</span> <span class="Identifier">false</span><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.
+    <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Returns all collected text parts joined with a blank line.
     
   </dd>
 </div>
@@ -352,7 +368,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 21:00:57 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 22:47:47 UTC</small>
       </div>
     </div>
   </div>

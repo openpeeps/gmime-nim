@@ -57,6 +57,9 @@
     <ul class="simple simple-toc-section">
       <li><a class="reference" href="#gboolean" title="gboolean = cint">gboolean</a></li>
 <li><a class="reference" href="#gbpointer" title="gbpointer = pointer">gbpointer</a></li>
+<li><a class="reference" href="#GByteArray" title="GByteArray {.incompleteStruct.} = object
+  data*: ptr guint8
+  len*: guint">GByteArray</a></li>
 <li><a class="reference" href="#GBytes" title="GBytes = object">GBytes</a></li>
 <li><a class="reference" href="#gconstpointer" title="gconstpointer = pointer">gconstpointer</a></li>
 <li><a class="reference" href="#GDateTime" title="GDateTime {.incompleteStruct.} = object">GDateTime</a></li>
@@ -72,7 +75,7 @@
 <li><a class="reference" href="#GOptionGroup" title="GOptionGroup = object">GOptionGroup</a></li>
 <li><a class="reference" href="#GParamSpec" title="GParamSpec = object">GParamSpec</a></li>
 <li><a class="reference" href="#gpointer" title="gpointer = pointer">gpointer</a></li>
-<li><a class="reference" href="#GPtrArray" title="GPtrArray = object
+<li><a class="reference" href="#GPtrArray" title="GPtrArray {.incompleteStruct.} = object
   pdata*: ptr pointer
   len*: guint">GPtrArray</a></li>
 <li><a class="reference" href="#GQuark" title="GQuark = guint">GQuark</a></li>
@@ -81,6 +84,7 @@
   next*: ptr GSList">GSList</a></li>
 <li><a class="reference" href="#GType" title="GType = culong">GType</a></li>
 <li><a class="reference" href="#guint" title="guint = uint">guint</a></li>
+<li><a class="reference" href="#guint8" title="guint8 = uint8">guint8</a></li>
 <li><a class="reference" href="#guint32" title="guint32 = uint32">guint32</a></li>
 <li><a class="reference" href="#guint64" title="guint64 = uint64">guint64</a></li>
 <li><a class="reference" href="#GValue" title="GValue = object">GValue</a></li>
@@ -100,6 +104,22 @@
 </ul>
 <ul class="simple nested-toc-section">g_object_unref
   <li><a class="reference" href="#g_object_unref%2Cpointer" title="g_object_unref(obj: pointer)">g_object_unref(obj: pointer)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">g_ptr_array_add
+  <li><a class="reference" href="#g_ptr_array_add%2Cptr.GPtrArray%2Cpointer" title="g_ptr_array_add(array: ptr GPtrArray; data: pointer)">g_ptr_array_add(array: ptr GPtrArray; data: pointer)</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">g_ptr_array_free
+  <li><a class="reference" href="#g_ptr_array_free%2Cptr.GPtrArray%2Cgboolean" title="g_ptr_array_free(array: ptr GPtrArray; free_seg: gboolean): pointer">g_ptr_array_free(array: ptr GPtrArray; free_seg: gboolean): pointer</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">g_ptr_array_new
+  <li><a class="reference" href="#g_ptr_array_new" title="g_ptr_array_new(): ptr GPtrArray">g_ptr_array_new(): ptr GPtrArray</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">g_type_check_instance_is_a
+  <li><a class="reference" href="#g_type_check_instance_is_a%2Cpointer%2CGType" title="g_type_check_instance_is_a(instance: pointer; iface_type: GType): gboolean">g_type_check_instance_is_a(instance: pointer; iface_type: GType): gboolean</a></li>
 
 </ul>
 
@@ -128,6 +148,16 @@
 </div>
 <div id="gbpointer">
   <dt><pre><a href="glib.html#gbpointer"><span class="Identifier">gbpointer</span></a> <span class="Other">=</span> <span class="Identifier">pointer</span></pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+<div id="GByteArray">
+  <dt><pre><a href="glib.html#GByteArray"><span class="Identifier">GByteArray</span></a> {.<span class="Identifier">incompleteStruct</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
+  <span class="Identifier">data</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib.html#guint8"><span class="Identifier">guint8</span></a>
+  <span class="Identifier">len</span><span class="Operator">*</span><span class="Other">:</span> <a href="glib.html#guint"><span class="Identifier">guint</span></a></pre></dt>
   <dd>
     
     
@@ -255,7 +285,7 @@
   </dd>
 </div>
 <div id="GPtrArray">
-  <dt><pre><a href="glib.html#GPtrArray"><span class="Identifier">GPtrArray</span></a> <span class="Other">=</span> <span class="Keyword">object</span>
+  <dt><pre><a href="glib.html#GPtrArray"><span class="Identifier">GPtrArray</span></a> {.<span class="Identifier">incompleteStruct</span>.} <span class="Other">=</span> <span class="Keyword">object</span>
   <span class="Identifier">pdata</span><span class="Operator">*</span><span class="Other">:</span> <span class="Keyword">ptr</span> <span class="Identifier">pointer</span>
   <span class="Identifier">len</span><span class="Operator">*</span><span class="Other">:</span> <a href="glib.html#guint"><span class="Identifier">guint</span></a></pre></dt>
   <dd>
@@ -292,6 +322,14 @@
 </div>
 <div id="guint">
   <dt><pre><a href="glib.html#guint"><span class="Identifier">guint</span></a> <span class="Other">=</span> <span class="Identifier">uint</span></pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+<div id="guint8">
+  <dt><pre><a href="glib.html#guint8"><span class="Identifier">guint8</span></a> <span class="Other">=</span> <span class="Identifier">uint8</span></pre></dt>
   <dd>
     
     
@@ -368,6 +406,54 @@
 </div>
 
 </div>
+<div id="g_ptr_array_add-procs-all">
+  <div id="g_ptr_array_add,ptr.GPtrArray,pointer">
+  <dt><pre><span class="Keyword">proc</span> <a href="#g_ptr_array_add%2Cptr.GPtrArray%2Cpointer"><span class="Identifier">g_ptr_array_add</span></a><span class="Other">(</span><span class="Identifier">array</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib.html#GPtrArray"><span class="Identifier">GPtrArray</span></a><span class="Other">;</span> <span class="Identifier">data</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">)</span> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span>
+    <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;glib-object.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="g_ptr_array_free-procs-all">
+  <div id="g_ptr_array_free,ptr.GPtrArray,gboolean">
+  <dt><pre><span class="Keyword">proc</span> <a href="#g_ptr_array_free%2Cptr.GPtrArray%2Cgboolean"><span class="Identifier">g_ptr_array_free</span></a><span class="Other">(</span><span class="Identifier">array</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib.html#GPtrArray"><span class="Identifier">GPtrArray</span></a><span class="Other">;</span> <span class="Identifier">free_seg</span><span class="Other">:</span> <a href="glib.html#gboolean"><span class="Identifier">gboolean</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">pointer</span> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;glib-object.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="g_ptr_array_new-procs-all">
+  <div id="g_ptr_array_new">
+  <dt><pre><span class="Keyword">proc</span> <a href="#g_ptr_array_new"><span class="Identifier">g_ptr_array_new</span></a><span class="Other">(</span><span class="Other">)</span><span class="Other">:</span> <span class="Keyword">ptr</span> <a href="glib.html#GPtrArray"><span class="Identifier">GPtrArray</span></a> {.<span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;glib-object.h&quot;</span><span class="Other">,</span>
+                                        <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
+<div id="g_type_check_instance_is_a-procs-all">
+  <div id="g_type_check_instance_is_a,pointer,GType">
+  <dt><pre><span class="Keyword">proc</span> <a href="#g_type_check_instance_is_a%2Cpointer%2CGType"><span class="Identifier">g_type_check_instance_is_a</span></a><span class="Other">(</span><span class="Identifier">instance</span><span class="Other">:</span> <span class="Identifier">pointer</span><span class="Other">;</span> <span class="Identifier">iface_type</span><span class="Other">:</span> <a href="glib.html#GType"><span class="Identifier">GType</span></a><span class="Other">)</span><span class="Other">:</span> <a href="glib.html#gboolean"><span class="Identifier">gboolean</span></a> {.
+    <span class="Identifier">cdecl</span><span class="Other">,</span> <span class="Identifier">importc</span><span class="Other">,</span> <span class="Identifier">header</span><span class="Other">:</span> <span class="StringLit">&quot;glib-object.h&quot;</span><span class="Other">,</span> <span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    
+    
+  </dd>
+</div>
+
+</div>
 
   </dl>
 </div>
@@ -378,7 +464,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 21:00:57 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2026-02-22 22:47:47 UTC</small>
       </div>
     </div>
   </div>

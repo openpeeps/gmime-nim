@@ -1,0 +1,29 @@
+nimTitle	gmime_part	gmime/bindings/gmime_part.html	module gmime/bindings/gmime_part		0
+nim	GMimePart	gmime/bindings/gmime_part.html#GMimePart	object GMimePart		17
+nim	GMimePartClass	gmime/bindings/gmime_part.html#GMimePartClass	object GMimePartClass		26
+nim	g_mime_part_get_type	gmime/bindings/gmime_part.html#g_mime_part_get_type	proc g_mime_part_get_type(): GType		30
+nim	g_mime_part_new	gmime/bindings/gmime_part.html#g_mime_part_new	proc g_mime_part_new(): ptr GMimePart		32
+nim	g_mime_part_new_with_type	gmime/bindings/gmime_part.html#g_mime_part_new_with_type,cstring,cstring	proc g_mime_part_new_with_type(typ, subtype: cstring): ptr GMimePart		33
+nim	g_mime_part_set_content_description	gmime/bindings/gmime_part.html#g_mime_part_set_content_description,ptr.GMimePart,cstring	proc g_mime_part_set_content_description(mime_part: ptr GMimePart;\n                                    description: cstring)		35
+nim	g_mime_part_get_content_description	gmime/bindings/gmime_part.html#g_mime_part_get_content_description,ptr.GMimePart	proc g_mime_part_get_content_description(mime_part: ptr GMimePart): cstring		36
+nim	g_mime_part_set_content_id	gmime/bindings/gmime_part.html#g_mime_part_set_content_id,ptr.GMimePart,cstring	proc g_mime_part_set_content_id(mime_part: ptr GMimePart; content_id: cstring)		38
+nim	g_mime_part_get_content_id	gmime/bindings/gmime_part.html#g_mime_part_get_content_id,ptr.GMimePart	proc g_mime_part_get_content_id(mime_part: ptr GMimePart): cstring		39
+nim	g_mime_part_set_content_md5	gmime/bindings/gmime_part.html#g_mime_part_set_content_md5,ptr.GMimePart,cstring	proc g_mime_part_set_content_md5(mime_part: ptr GMimePart; content_md5: cstring)		41
+nim	g_mime_part_verify_content_md5	gmime/bindings/gmime_part.html#g_mime_part_verify_content_md5,ptr.GMimePart	proc g_mime_part_verify_content_md5(mime_part: ptr GMimePart): gboolean		42
+nim	g_mime_part_get_content_md5	gmime/bindings/gmime_part.html#g_mime_part_get_content_md5,ptr.GMimePart	proc g_mime_part_get_content_md5(mime_part: ptr GMimePart): cstring		43
+nim	g_mime_part_set_content_location	gmime/bindings/gmime_part.html#g_mime_part_set_content_location,ptr.GMimePart,cstring	proc g_mime_part_set_content_location(mime_part: ptr GMimePart;\n                                 content_location: cstring)		45
+nim	g_mime_part_get_content_location	gmime/bindings/gmime_part.html#g_mime_part_get_content_location,ptr.GMimePart	proc g_mime_part_get_content_location(mime_part: ptr GMimePart): cstring		46
+nim	g_mime_part_set_content_encoding	gmime/bindings/gmime_part.html#g_mime_part_set_content_encoding,ptr.GMimePart,GMimeContentEncoding	proc g_mime_part_set_content_encoding(mime_part: ptr GMimePart;\n                                 encoding: GMimeContentEncoding)		48
+nim	g_mime_part_get_content_encoding	gmime/bindings/gmime_part.html#g_mime_part_get_content_encoding,ptr.GMimePart	proc g_mime_part_get_content_encoding(mime_part: ptr GMimePart): GMimeContentEncoding		49
+nim	g_mime_part_get_best_content_encoding	gmime/bindings/gmime_part.html#g_mime_part_get_best_content_encoding,ptr.GMimePart,GMimeEncodingConstraint	proc g_mime_part_get_best_content_encoding(mime_part: ptr GMimePart;\n                                      constraint: GMimeEncodingConstraint): GMimeContentEncoding		51
+nim	g_mime_part_is_attachment	gmime/bindings/gmime_part.html#g_mime_part_is_attachment,ptr.GMimePart	proc g_mime_part_is_attachment(mime_part: ptr GMimePart): gboolean		53
+nim	g_mime_part_set_filename	gmime/bindings/gmime_part.html#g_mime_part_set_filename,ptr.GMimePart,cstring	proc g_mime_part_set_filename(mime_part: ptr GMimePart; filename: cstring)		55
+nim	g_mime_part_get_filename	gmime/bindings/gmime_part.html#g_mime_part_get_filename,ptr.GMimePart	proc g_mime_part_get_filename(mime_part: ptr GMimePart): cstring		56
+nim	g_mime_part_set_content	gmime/bindings/gmime_part.html#g_mime_part_set_content,ptr.GMimePart,ptr.GMimeDataWrapper	proc g_mime_part_set_content(mime_part: ptr GMimePart; content: ptr GMimeDataWrapper)		58
+nim	g_mime_part_get_content	gmime/bindings/gmime_part.html#g_mime_part_get_content,ptr.GMimePart	proc g_mime_part_get_content(mime_part: ptr GMimePart): ptr GMimeDataWrapper		59
+nim	g_mime_part_set_openpgp_data	gmime/bindings/gmime_part.html#g_mime_part_set_openpgp_data,ptr.GMimePart,GMimeOpenPGPData	proc g_mime_part_set_openpgp_data(mime_part: ptr GMimePart; data: GMimeOpenPGPData)		61
+nim	g_mime_part_get_openpgp_data	gmime/bindings/gmime_part.html#g_mime_part_get_openpgp_data,ptr.GMimePart	proc g_mime_part_get_openpgp_data(mime_part: ptr GMimePart): GMimeOpenPGPData		62
+nim	g_mime_part_openpgp_encrypt	gmime/bindings/gmime_part.html#g_mime_part_openpgp_encrypt,ptr.GMimePart,gboolean,cstring,GMimeEncryptFlags,pointer,ptr.GError	proc g_mime_part_openpgp_encrypt(mime_part: ptr GMimePart; sign: gboolean;\n                            userid: cstring; flags: GMimeEncryptFlags;\n                            recipients: pointer; err: ptr GError): gboolean		64
+nim	g_mime_part_openpgp_decrypt	gmime/bindings/gmime_part.html#g_mime_part_openpgp_decrypt,ptr.GMimePart,GMimeDecryptFlags,cstring,ptr.GError	proc g_mime_part_openpgp_decrypt(mime_part: ptr GMimePart; flags: GMimeDecryptFlags;\n                            session_key: cstring; err: ptr GError): pointer		66
+nim	g_mime_part_openpgp_sign	gmime/bindings/gmime_part.html#g_mime_part_openpgp_sign,ptr.GMimePart,cstring,ptr.GError	proc g_mime_part_openpgp_sign(mime_part: ptr GMimePart; userid: cstring;\n                         err: ptr GError): gboolean		68
+nim	g_mime_part_openpgp_verify	gmime/bindings/gmime_part.html#g_mime_part_openpgp_verify,ptr.GMimePart,GMimeVerifyFlags,ptr.GError	proc g_mime_part_openpgp_verify(mime_part: ptr GMimePart; flags: GMimeVerifyFlags;\n                           err: ptr GError): pointer		69

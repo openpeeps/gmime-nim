@@ -1,0 +1,17 @@
+nimTitle	gmime_part_iter	gmime/bindings/gmime_part_iter.html	module gmime/bindings/gmime_part_iter		0
+nim	GMimePartIter	gmime/bindings/gmime_part_iter.html#GMimePartIter	object GMimePartIter		13
+nim	g_mime_part_iter_get_type	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_get_type	proc g_mime_part_iter_get_type(): GType		15
+nim	g_mime_part_iter_new	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_new,ptr.GMimeObject	proc g_mime_part_iter_new(toplevel: ptr GMimeObject): ptr GMimePartIter		17
+nim	g_mime_part_iter_free	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_free,ptr.GMimePartIter	proc g_mime_part_iter_free(iter: ptr GMimePartIter)		18
+nim	g_mime_part_iter_clone	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_clone,ptr.GMimePartIter	proc g_mime_part_iter_clone(iter: ptr GMimePartIter): ptr GMimePartIter		19
+nim	g_mime_part_iter_reset	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_reset,ptr.GMimePartIter	proc g_mime_part_iter_reset(iter: ptr GMimePartIter)		20
+nim	g_mime_part_iter_jump_to	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_jump_to,ptr.GMimePartIter,cstring	proc g_mime_part_iter_jump_to(iter: ptr GMimePartIter; path: cstring): gboolean		21
+nim	g_mime_part_iter_is_valid	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_is_valid,ptr.GMimePartIter	proc g_mime_part_iter_is_valid(iter: ptr GMimePartIter): gboolean		22
+nim	g_mime_part_iter_next	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_next,ptr.GMimePartIter	proc g_mime_part_iter_next(iter: ptr GMimePartIter): gboolean		23
+nim	g_mime_part_iter_prev	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_prev,ptr.GMimePartIter	proc g_mime_part_iter_prev(iter: ptr GMimePartIter): gboolean		24
+nim	g_mime_part_iter_get_toplevel	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_get_toplevel,ptr.GMimePartIter	proc g_mime_part_iter_get_toplevel(iter: ptr GMimePartIter): ptr GMimeObject		25
+nim	g_mime_part_iter_get_current	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_get_current,ptr.GMimePartIter	proc g_mime_part_iter_get_current(iter: ptr GMimePartIter): ptr GMimeObject		26
+nim	g_mime_part_iter_get_parent	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_get_parent,ptr.GMimePartIter	proc g_mime_part_iter_get_parent(iter: ptr GMimePartIter): ptr GMimeObject		27
+nim	g_mime_part_iter_get_path	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_get_path,ptr.GMimePartIter	proc g_mime_part_iter_get_path(iter: ptr GMimePartIter): cstring		28
+nim	g_mime_part_iter_replace	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_replace,ptr.GMimePartIter,ptr.GMimeObject	proc g_mime_part_iter_replace(iter: ptr GMimePartIter; replacement: ptr GMimeObject): gboolean		29
+nim	g_mime_part_iter_remove	gmime/bindings/gmime_part_iter.html#g_mime_part_iter_remove,ptr.GMimePartIter	proc g_mime_part_iter_remove(iter: ptr GMimePartIter): gboolean		30

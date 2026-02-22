@@ -1,0 +1,8 @@
+nimTitle	gmime_filter_best	gmime/bindings/gmime_filter_best.html	module gmime/bindings/gmime_filter_best		0
+nim	GMimeFilterBestFlags	gmime/bindings/gmime_filter_best.html#GMimeFilterBestFlags	enum GMimeFilterBestFlags		13
+nim	GMimeFilterBest	gmime/bindings/gmime_filter_best.html#GMimeFilterBest	object GMimeFilterBest		17
+nim	GMimeFilterBestClass	gmime/bindings/gmime_filter_best.html#GMimeFilterBestClass	object GMimeFilterBestClass		22
+nim	g_mime_filter_best_get_type	gmime/bindings/gmime_filter_best.html#g_mime_filter_best_get_type	proc g_mime_filter_best_get_type(): GType		25
+nim	g_mime_filter_best_new	gmime/bindings/gmime_filter_best.html#g_mime_filter_best_new,GMimeFilterBestFlags	proc g_mime_filter_best_new(flags: GMimeFilterBestFlags): ptr GMimeFilter		26
+nim	g_mime_filter_best_charset	gmime/bindings/gmime_filter_best.html#g_mime_filter_best_charset,ptr.GMimeFilterBest	proc g_mime_filter_best_charset(best: ptr GMimeFilterBest): cstring		27
+nim	g_mime_filter_best_encoding	gmime/bindings/gmime_filter_best.html#g_mime_filter_best_encoding,ptr.GMimeFilterBest,GMimeEncodingConstraint	proc g_mime_filter_best_encoding(best: ptr GMimeFilterBest;\n                            constraint: GMimeEncodingConstraint): GMimeContentEncoding		28

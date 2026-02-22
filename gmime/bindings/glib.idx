@@ -9,22 +9,28 @@ nim	GParamSpec	gmime/bindings/glib.html#GParamSpec	object GParamSpec		25
 nim	GOptionGroup	gmime/bindings/glib.html#GOptionGroup	object GOptionGroup		28
 nim	GDestroyNotify	gmime/bindings/glib.html#GDestroyNotify	type GDestroyNotify		31
 nim	GBytes	gmime/bindings/glib.html#GBytes	object GBytes		32
-nim	GPtrArray	gmime/bindings/glib.html#GPtrArray	object GPtrArray		35
-nim	GHashTable	gmime/bindings/glib.html#GHashTable	object GHashTable		40
-nim	GQuark	gmime/bindings/glib.html#GQuark	type GQuark		43
-nim	GError	gmime/bindings/glib.html#GError	object GError		44
-nim	gboolean	gmime/bindings/glib.html#gboolean	type gboolean		46
-nim	guint	gmime/bindings/glib.html#guint	type guint		47
-nim	guint64	gmime/bindings/glib.html#guint64	type guint64		48
-nim	guint32	gmime/bindings/glib.html#guint32	type guint32		49
-nim	gint64	gmime/bindings/glib.html#gint64	type gint64		50
-nim	gint32	gmime/bindings/glib.html#gint32	type gint32		51
-nim	gint	gmime/bindings/glib.html#gint	type gint		52
-nim	gpointer	gmime/bindings/glib.html#gpointer	type gpointer		53
-nim	time_t	gmime/bindings/glib.html#time_t	type time_t		54
-nim	gconstpointer	gmime/bindings/glib.html#gconstpointer	type gconstpointer		55
-nim	ssize_t	gmime/bindings/glib.html#ssize_t	type ssize_t		56
-nim	gbpointer	gmime/bindings/glib.html#gbpointer	type gbpointer		57
-nim	g_object_unref	gmime/bindings/glib.html#g_object_unref,pointer	proc g_object_unref(obj: pointer)		60
-nim	GDateTime	gmime/bindings/glib.html#GDateTime	object GDateTime		65
-nim	g_date_time_to_unix	gmime/bindings/glib.html#g_date_time_to_unix,ptr.GDateTime	proc g_date_time_to_unix(datetime: ptr GDateTime): time_t		68
+nim	GHashTable	gmime/bindings/glib.html#GHashTable	object GHashTable		35
+nim	GQuark	gmime/bindings/glib.html#GQuark	type GQuark		38
+nim	GError	gmime/bindings/glib.html#GError	object GError		39
+nim	gboolean	gmime/bindings/glib.html#gboolean	type gboolean		41
+nim	guint	gmime/bindings/glib.html#guint	type guint		42
+nim	guint64	gmime/bindings/glib.html#guint64	type guint64		43
+nim	guint32	gmime/bindings/glib.html#guint32	type guint32		44
+nim	gint64	gmime/bindings/glib.html#gint64	type gint64		45
+nim	gint32	gmime/bindings/glib.html#gint32	type gint32		46
+nim	gint	gmime/bindings/glib.html#gint	type gint		47
+nim	gpointer	gmime/bindings/glib.html#gpointer	type gpointer		48
+nim	time_t	gmime/bindings/glib.html#time_t	type time_t		49
+nim	gconstpointer	gmime/bindings/glib.html#gconstpointer	type gconstpointer		50
+nim	ssize_t	gmime/bindings/glib.html#ssize_t	type ssize_t		51
+nim	gbpointer	gmime/bindings/glib.html#gbpointer	type gbpointer		52
+nim	guint8	gmime/bindings/glib.html#guint8	type guint8		53
+nim	GPtrArray	gmime/bindings/glib.html#GPtrArray	object GPtrArray		58
+nim	GByteArray	gmime/bindings/glib.html#GByteArray	object GByteArray		63
+nim	g_object_unref	gmime/bindings/glib.html#g_object_unref,pointer	proc g_object_unref(obj: pointer)		67
+nim	g_type_check_instance_is_a	gmime/bindings/glib.html#g_type_check_instance_is_a,pointer,GType	proc g_type_check_instance_is_a(instance: pointer; iface_type: GType): gboolean		68
+nim	g_ptr_array_new	gmime/bindings/glib.html#g_ptr_array_new	proc g_ptr_array_new(): ptr GPtrArray		69
+nim	g_ptr_array_add	gmime/bindings/glib.html#g_ptr_array_add,ptr.GPtrArray,pointer	proc g_ptr_array_add(array: ptr GPtrArray; data: pointer)		70
+nim	g_ptr_array_free	gmime/bindings/glib.html#g_ptr_array_free,ptr.GPtrArray,gboolean	proc g_ptr_array_free(array: ptr GPtrArray; free_seg: gboolean): pointer		71
+nim	GDateTime	gmime/bindings/glib.html#GDateTime	object GDateTime		76
+nim	g_date_time_to_unix	gmime/bindings/glib.html#g_date_time_to_unix,ptr.GDateTime	proc g_date_time_to_unix(datetime: ptr GDateTime): time_t		79
