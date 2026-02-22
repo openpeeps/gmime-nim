@@ -1,5 +1,5 @@
 import unittest, os
-import gmime
+import ../src/gmime
 
 g_mime_init() # required before using GMime APIs
 
