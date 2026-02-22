@@ -1,0 +1,10 @@
+nimTitle	gmime_filter	gmime/bindings/gmime_filter.html	module gmime/bindings/gmime_filter		0
+nim	GMimeFilter	gmime/bindings/gmime_filter.html#GMimeFilter	object GMimeFilter		11
+nim	GMimeFilterClass	gmime/bindings/gmime_filter.html#GMimeFilterClass	object GMimeFilterClass		23
+nim	g_mime_filter_get_type	gmime/bindings/gmime_filter.html#g_mime_filter_get_type	proc g_mime_filter_get_type(): GType		32
+nim	g_mime_filter_copy	gmime/bindings/gmime_filter.html#g_mime_filter_copy,ptr.GMimeFilter	proc g_mime_filter_copy(filter: ptr GMimeFilter): ptr GMimeFilter		34
+nim	g_mime_filter_filter	gmime/bindings/gmime_filter.html#g_mime_filter_filter,ptr.GMimeFilter,cstring,csize_t,csize_t,ptr.cstring,ptr.csize_t,ptr.csize_t	proc g_mime_filter_filter(filter: ptr GMimeFilter; inbuf: cstring; inlen: csize_t;\n                     prespace: csize_t; outbuf: ptr cstring;\n                     outlen: ptr csize_t; outprespace: ptr csize_t)		36
+nim	g_mime_filter_complete	gmime/bindings/gmime_filter.html#g_mime_filter_complete,ptr.GMimeFilter,cstring,csize_t,csize_t,ptr.cstring,ptr.csize_t,ptr.csize_t	proc g_mime_filter_complete(filter: ptr GMimeFilter; inbuf: cstring; inlen: csize_t;\n                       prespace: csize_t; outbuf: ptr cstring;\n                       outlen: ptr csize_t; outprespace: ptr csize_t)		37
+nim	g_mime_filter_reset	gmime/bindings/gmime_filter.html#g_mime_filter_reset,ptr.GMimeFilter	proc g_mime_filter_reset(filter: ptr GMimeFilter)		38
+nim	g_mime_filter_backup	gmime/bindings/gmime_filter.html#g_mime_filter_backup,ptr.GMimeFilter,cstring,csize_t	proc g_mime_filter_backup(filter: ptr GMimeFilter; data: cstring; length: csize_t)		40
+nim	g_mime_filter_set_size	gmime/bindings/gmime_filter.html#g_mime_filter_set_size,ptr.GMimeFilter,csize_t,gboolean	proc g_mime_filter_set_size(filter: ptr GMimeFilter; size: csize_t; keep: gboolean)		41

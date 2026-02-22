@@ -1,0 +1,26 @@
+nimTitle	gmime_param	gmime/bindings/gmime_param.html	module gmime/bindings/gmime_param		0
+nim	GMimeParam	gmime/bindings/gmime_param.html#GMimeParam	object GMimeParam		13
+nim	GMimeParamClass	gmime/bindings/gmime_param.html#GMimeParamClass	object GMimeParamClass		22
+nim	GMimeParamList	gmime/bindings/gmime_param.html#GMimeParamList	object GMimeParamList		25
+nim	GMimeParamListClass	gmime/bindings/gmime_param.html#GMimeParamListClass	object GMimeParamListClass		30
+nim	g_mime_param_get_type	gmime/bindings/gmime_param.html#g_mime_param_get_type	proc g_mime_param_get_type(): GType		35
+nim	g_mime_param_get_name	gmime/bindings/gmime_param.html#g_mime_param_get_name,ptr.GMimeParam	proc g_mime_param_get_name(param: ptr GMimeParam): cstring		37
+nim	g_mime_param_get_value	gmime/bindings/gmime_param.html#g_mime_param_get_value,ptr.GMimeParam	proc g_mime_param_get_value(param: ptr GMimeParam): cstring		39
+nim	g_mime_param_set_value	gmime/bindings/gmime_param.html#g_mime_param_set_value,ptr.GMimeParam,cstring	proc g_mime_param_set_value(param: ptr GMimeParam; value: cstring)		40
+nim	g_mime_param_get_charset	gmime/bindings/gmime_param.html#g_mime_param_get_charset,ptr.GMimeParam	proc g_mime_param_get_charset(param: ptr GMimeParam): cstring		42
+nim	g_mime_param_set_charset	gmime/bindings/gmime_param.html#g_mime_param_set_charset,ptr.GMimeParam,cstring	proc g_mime_param_set_charset(param: ptr GMimeParam; charset: cstring)		43
+nim	g_mime_param_get_lang	gmime/bindings/gmime_param.html#g_mime_param_get_lang,ptr.GMimeParam	proc g_mime_param_get_lang(param: ptr GMimeParam): cstring		45
+nim	g_mime_param_set_lang	gmime/bindings/gmime_param.html#g_mime_param_set_lang,ptr.GMimeParam,cstring	proc g_mime_param_set_lang(param: ptr GMimeParam; lang: cstring)		46
+nim	g_mime_param_get_encoding_method	gmime/bindings/gmime_param.html#g_mime_param_get_encoding_method,ptr.GMimeParam	proc g_mime_param_get_encoding_method(param: ptr GMimeParam): GMimeParamEncodingMethod		48
+nim	g_mime_param_set_encoding_method	gmime/bindings/gmime_param.html#g_mime_param_set_encoding_method,ptr.GMimeParam,GMimeParamEncodingMethod	proc g_mime_param_set_encoding_method(param: ptr GMimeParam;\n                                 method: GMimeParamEncodingMethod)		49
+nim	g_mime_param_list_get_type	gmime/bindings/gmime_param.html#g_mime_param_list_get_type	proc g_mime_param_list_get_type(): GType		51
+nim	g_mime_param_list_new	gmime/bindings/gmime_param.html#g_mime_param_list_new	proc g_mime_param_list_new(): ptr GMimeParamList		53
+nim	g_mime_param_list_parse	gmime/bindings/gmime_param.html#g_mime_param_list_parse,ptr.GMimeParserOptions,cstring	proc g_mime_param_list_parse(options: ptr GMimeParserOptions; str: cstring): ptr GMimeParamList		54
+nim	g_mime_param_list_length	gmime/bindings/gmime_param.html#g_mime_param_list_length,ptr.GMimeParamList	proc g_mime_param_list_length(list: ptr GMimeParamList): int		56
+nim	g_mime_param_list_clear	gmime/bindings/gmime_param.html#g_mime_param_list_clear,ptr.GMimeParamList	proc g_mime_param_list_clear(list: ptr GMimeParamList)		58
+nim	g_mime_param_list_set_parameter	gmime/bindings/gmime_param.html#g_mime_param_list_set_parameter,ptr.GMimeParamList,cstring,cstring	proc g_mime_param_list_set_parameter(list: ptr GMimeParamList; name: cstring;\n                                value: cstring)		60
+nim	g_mime_param_list_get_parameter	gmime/bindings/gmime_param.html#g_mime_param_list_get_parameter,ptr.GMimeParamList,cstring	proc g_mime_param_list_get_parameter(list: ptr GMimeParamList; name: cstring): ptr GMimeParam		61
+nim	g_mime_param_list_get_parameter_at	gmime/bindings/gmime_param.html#g_mime_param_list_get_parameter_at,ptr.GMimeParamList,int	proc g_mime_param_list_get_parameter_at(list: ptr GMimeParamList; index: int): ptr GMimeParam		62
+nim	g_mime_param_list_remove	gmime/bindings/gmime_param.html#g_mime_param_list_remove,ptr.GMimeParamList,cstring	proc g_mime_param_list_remove(list: ptr GMimeParamList; name: cstring): gboolean		64
+nim	g_mime_param_list_remove_at	gmime/bindings/gmime_param.html#g_mime_param_list_remove_at,ptr.GMimeParamList,int	proc g_mime_param_list_remove_at(list: ptr GMimeParamList; index: int): gboolean		65
+nim	g_mime_param_list_encode	gmime/bindings/gmime_param.html#g_mime_param_list_encode,ptr.GMimeParamList,ptr.GMimeFormatOptions,gboolean,pointer	proc g_mime_param_list_encode(list: ptr GMimeParamList;\n                         options: ptr GMimeFormatOptions; fold: gboolean;\n                         str: pointer)		67

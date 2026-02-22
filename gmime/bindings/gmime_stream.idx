@@ -1,0 +1,25 @@
+nimTitle	gmime_stream	gmime/bindings/gmime_stream.html	module gmime/bindings/gmime_stream		0
+nim	GMIME_STREAM_SEEK_SET	gmime/bindings/gmime_stream.html#GMIME_STREAM_SEEK_SET	GMimeSeekWhence.GMIME_STREAM_SEEK_SET		11
+nim	GMIME_STREAM_SEEK_CUR	gmime/bindings/gmime_stream.html#GMIME_STREAM_SEEK_CUR	GMimeSeekWhence.GMIME_STREAM_SEEK_CUR		11
+nim	GMIME_STREAM_SEEK_END	gmime/bindings/gmime_stream.html#GMIME_STREAM_SEEK_END	GMimeSeekWhence.GMIME_STREAM_SEEK_END		11
+nim	GMimeSeekWhence	gmime/bindings/gmime_stream.html#GMimeSeekWhence	enum GMimeSeekWhence		11
+nim	GMimeStreamIOVector	gmime/bindings/gmime_stream.html#GMimeStreamIOVector	object GMimeStreamIOVector		18
+nim	GMimeStream	gmime/bindings/gmime_stream.html#GMimeStream	object GMimeStream		22
+nim	GMimeStreamClass	gmime/bindings/gmime_stream.html#GMimeStreamClass	object GMimeStreamClass		29
+nim	g_mime_stream_get_type	gmime/bindings/gmime_stream.html#g_mime_stream_get_type	proc g_mime_stream_get_type(): GType		44
+nim	g_mime_stream_construct	gmime/bindings/gmime_stream.html#g_mime_stream_construct,ptr.GMimeStream,gint64,gint64	proc g_mime_stream_construct(stream: ptr GMimeStream; start: gint64; end: gint64)		46
+nim	g_mime_stream_read	gmime/bindings/gmime_stream.html#g_mime_stream_read,ptr.GMimeStream,cstring,csize_t	proc g_mime_stream_read(stream: ptr GMimeStream; buf: cstring; len: csize_t): ssize_t		48
+nim	g_mime_stream_write	gmime/bindings/gmime_stream.html#g_mime_stream_write,ptr.GMimeStream,cstring,csize_t	proc g_mime_stream_write(stream: ptr GMimeStream; buf: cstring; len: csize_t): ssize_t		49
+nim	g_mime_stream_flush	gmime/bindings/gmime_stream.html#g_mime_stream_flush,ptr.GMimeStream	proc g_mime_stream_flush(stream: ptr GMimeStream): int		50
+nim	g_mime_stream_close	gmime/bindings/gmime_stream.html#g_mime_stream_close,ptr.GMimeStream	proc g_mime_stream_close(stream: ptr GMimeStream): int		51
+nim	g_mime_stream_eos	gmime/bindings/gmime_stream.html#g_mime_stream_eos,ptr.GMimeStream	proc g_mime_stream_eos(stream: ptr GMimeStream): gboolean		52
+nim	g_mime_stream_reset	gmime/bindings/gmime_stream.html#g_mime_stream_reset,ptr.GMimeStream	proc g_mime_stream_reset(stream: ptr GMimeStream): int		53
+nim	g_mime_stream_seek	gmime/bindings/gmime_stream.html#g_mime_stream_seek,ptr.GMimeStream,gint64,GMimeSeekWhence	proc g_mime_stream_seek(stream: ptr GMimeStream; offset: gint64;\n                   whence: GMimeSeekWhence): gint64		54
+nim	g_mime_stream_tell	gmime/bindings/gmime_stream.html#g_mime_stream_tell,ptr.GMimeStream	proc g_mime_stream_tell(stream: ptr GMimeStream): gint64		55
+nim	g_mime_stream_length	gmime/bindings/gmime_stream.html#g_mime_stream_length,ptr.GMimeStream	proc g_mime_stream_length(stream: ptr GMimeStream): gint64		56
+nim	g_mime_stream_substream	gmime/bindings/gmime_stream.html#g_mime_stream_substream,ptr.GMimeStream,gint64,gint64	proc g_mime_stream_substream(stream: ptr GMimeStream; start: gint64; end: gint64): ptr GMimeStream		58
+nim	g_mime_stream_set_bounds	gmime/bindings/gmime_stream.html#g_mime_stream_set_bounds,ptr.GMimeStream,gint64,gint64	proc g_mime_stream_set_bounds(stream: ptr GMimeStream; start: gint64; end: gint64)		60
+nim	g_mime_stream_write_string	gmime/bindings/gmime_stream.html#g_mime_stream_write_string,ptr.GMimeStream,cstring	proc g_mime_stream_write_string(stream: ptr GMimeStream; str: cstring): ssize_t		62
+nim	g_mime_stream_printf	gmime/bindings/gmime_stream.html#g_mime_stream_printf,ptr.GMimeStream,cstring	proc g_mime_stream_printf(stream: ptr GMimeStream; fmt: cstring): ssize_t		63
+nim	g_mime_stream_write_to_stream	gmime/bindings/gmime_stream.html#g_mime_stream_write_to_stream,ptr.GMimeStream,ptr.GMimeStream	proc g_mime_stream_write_to_stream(src: ptr GMimeStream; dest: ptr GMimeStream): gint64		65
+nim	g_mime_stream_writev	gmime/bindings/gmime_stream.html#g_mime_stream_writev,ptr.GMimeStream,ptr.GMimeStreamIOVector,csize_t	proc g_mime_stream_writev(stream: ptr GMimeStream; vector: ptr GMimeStreamIOVector;\n                     count: csize_t): gint64		67

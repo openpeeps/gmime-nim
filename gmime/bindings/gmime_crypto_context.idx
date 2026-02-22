@@ -1,0 +1,63 @@
+nimTitle	gmime_crypto_context	gmime/bindings/gmime_crypto_context.html	module gmime/bindings/gmime_crypto_context		0
+nim	GMimePasswordRequestFunc	gmime/bindings/gmime_crypto_context.html#GMimePasswordRequestFunc	type GMimePasswordRequestFunc		13
+nim	GMimeCryptoContextNewFunc	gmime/bindings/gmime_crypto_context.html#GMimeCryptoContextNewFunc	type GMimeCryptoContextNewFunc		16
+nim	decryptNone	gmime/bindings/gmime_crypto_context.html#decryptNone	GMimeDecryptFlags.decryptNone		18
+nim	decryptExportSessionKey	gmime/bindings/gmime_crypto_context.html#decryptExportSessionKey	GMimeDecryptFlags.decryptExportSessionKey		18
+nim	decryptNoVerify	gmime/bindings/gmime_crypto_context.html#decryptNoVerify	GMimeDecryptFlags.decryptNoVerify		18
+nim	decryptEnableKeyserverLookups	gmime/bindings/gmime_crypto_context.html#decryptEnableKeyserverLookups	GMimeDecryptFlags.decryptEnableKeyserverLookups		18
+nim	decryptEnableOnlineCertificateChecks	gmime/bindings/gmime_crypto_context.html#decryptEnableOnlineCertificateChecks	GMimeDecryptFlags.decryptEnableOnlineCertificateChecks		18
+nim	GMimeDecryptFlags	gmime/bindings/gmime_crypto_context.html#GMimeDecryptFlags	enum GMimeDecryptFlags		18
+nim	encryptNone	gmime/bindings/gmime_crypto_context.html#encryptNone	GMimeEncryptFlags.encryptNone		25
+nim	encryptAlwaysTrust	gmime/bindings/gmime_crypto_context.html#encryptAlwaysTrust	GMimeEncryptFlags.encryptAlwaysTrust		25
+nim	encryptNoCompress	gmime/bindings/gmime_crypto_context.html#encryptNoCompress	GMimeEncryptFlags.encryptNoCompress		25
+nim	encryptSymmetric	gmime/bindings/gmime_crypto_context.html#encryptSymmetric	GMimeEncryptFlags.encryptSymmetric		25
+nim	encryptThrowKeyids	gmime/bindings/gmime_crypto_context.html#encryptThrowKeyids	GMimeEncryptFlags.encryptThrowKeyids		25
+nim	GMimeEncryptFlags	gmime/bindings/gmime_crypto_context.html#GMimeEncryptFlags	enum GMimeEncryptFlags		25
+nim	verifyNone	gmime/bindings/gmime_crypto_context.html#verifyNone	GMimeVerifyFlags.verifyNone		32
+nim	verifyEnableKeyserverLookups	gmime/bindings/gmime_crypto_context.html#verifyEnableKeyserverLookups	GMimeVerifyFlags.verifyEnableKeyserverLookups		32
+nim	verifyEnableOnlineCertificateChecks	gmime/bindings/gmime_crypto_context.html#verifyEnableOnlineCertificateChecks	GMimeVerifyFlags.verifyEnableOnlineCertificateChecks		32
+nim	GMimeVerifyFlags	gmime/bindings/gmime_crypto_context.html#GMimeVerifyFlags	enum GMimeVerifyFlags		32
+nim	GMimeCryptoContext	gmime/bindings/gmime_crypto_context.html#GMimeCryptoContext	object GMimeCryptoContext		37
+nim	GMimeCryptoContextClass	gmime/bindings/gmime_crypto_context.html#GMimeCryptoContextClass	object GMimeCryptoContextClass		41
+nim	cipherAlgoDefault	gmime/bindings/gmime_crypto_context.html#cipherAlgoDefault	GMimeCipherAlgo.cipherAlgoDefault		62
+nim	cipherAlgoIDEA	gmime/bindings/gmime_crypto_context.html#cipherAlgoIDEA	GMimeCipherAlgo.cipherAlgoIDEA		62
+nim	cipherAlgo3DES	gmime/bindings/gmime_crypto_context.html#cipherAlgo3DES	GMimeCipherAlgo.cipherAlgo3DES		62
+nim	cipherAlgoCAST5	gmime/bindings/gmime_crypto_context.html#cipherAlgoCAST5	GMimeCipherAlgo.cipherAlgoCAST5		62
+nim	cipherAlgoBlowfish	gmime/bindings/gmime_crypto_context.html#cipherAlgoBlowfish	GMimeCipherAlgo.cipherAlgoBlowfish		62
+nim	cipherAlgoAES	gmime/bindings/gmime_crypto_context.html#cipherAlgoAES	GMimeCipherAlgo.cipherAlgoAES		62
+nim	cipherAlgoAES192	gmime/bindings/gmime_crypto_context.html#cipherAlgoAES192	GMimeCipherAlgo.cipherAlgoAES192		62
+nim	cipherAlgoAES256	gmime/bindings/gmime_crypto_context.html#cipherAlgoAES256	GMimeCipherAlgo.cipherAlgoAES256		62
+nim	cipherAlgoTwofish	gmime/bindings/gmime_crypto_context.html#cipherAlgoTwofish	GMimeCipherAlgo.cipherAlgoTwofish		62
+nim	cipherAlgoCamellia128	gmime/bindings/gmime_crypto_context.html#cipherAlgoCamellia128	GMimeCipherAlgo.cipherAlgoCamellia128		62
+nim	cipherAlgoCamellia192	gmime/bindings/gmime_crypto_context.html#cipherAlgoCamellia192	GMimeCipherAlgo.cipherAlgoCamellia192		62
+nim	cipherAlgoCamellia256	gmime/bindings/gmime_crypto_context.html#cipherAlgoCamellia256	GMimeCipherAlgo.cipherAlgoCamellia256		62
+nim	GMimeCipherAlgo	gmime/bindings/gmime_crypto_context.html#GMimeCipherAlgo	enum GMimeCipherAlgo		62
+nim	GMimeDecryptResult	gmime/bindings/gmime_crypto_context.html#GMimeDecryptResult	object GMimeDecryptResult		76
+nim	GMimeDecryptResultClass	gmime/bindings/gmime_crypto_context.html#GMimeDecryptResultClass	object GMimeDecryptResultClass		84
+nim	g_mime_crypto_context_get_type	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_get_type	proc g_mime_crypto_context_get_type(): GType		88
+nim	g_mime_crypto_context_register	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_register,cstring,GMimeCryptoContextNewFunc	proc g_mime_crypto_context_register(protocol: cstring;\n                               callback: GMimeCryptoContextNewFunc)		89
+nim	g_mime_crypto_context_new	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_new,cstring	proc g_mime_crypto_context_new(protocol: cstring): ptr GMimeCryptoContext		90
+nim	g_mime_crypto_context_set_request_password	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_set_request_password,ptr.GMimeCryptoContext,GMimePasswordRequestFunc	proc g_mime_crypto_context_set_request_password(ctx: ptr GMimeCryptoContext;\n    requestPasswd: GMimePasswordRequestFunc)		91
+nim	g_mime_crypto_context_digest_id	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_digest_id,ptr.GMimeCryptoContext,cstring	proc g_mime_crypto_context_digest_id(ctx: ptr GMimeCryptoContext; name: cstring): GMimeDigestAlgo		93
+nim	g_mime_crypto_context_digest_name	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_digest_name,ptr.GMimeCryptoContext,GMimeDigestAlgo	proc g_mime_crypto_context_digest_name(ctx: ptr GMimeCryptoContext;\n                                  digest: GMimeDigestAlgo): cstring		94
+nim	g_mime_crypto_context_get_signature_protocol	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_get_signature_protocol,ptr.GMimeCryptoContext	proc g_mime_crypto_context_get_signature_protocol(ctx: ptr GMimeCryptoContext): cstring		96
+nim	g_mime_crypto_context_get_encryption_protocol	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_get_encryption_protocol,ptr.GMimeCryptoContext	proc g_mime_crypto_context_get_encryption_protocol(ctx: ptr GMimeCryptoContext): cstring		97
+nim	g_mime_crypto_context_get_key_exchange_protocol	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_get_key_exchange_protocol,ptr.GMimeCryptoContext	proc g_mime_crypto_context_get_key_exchange_protocol(ctx: ptr GMimeCryptoContext): cstring		98
+nim	g_mime_crypto_context_sign	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_sign,ptr.GMimeCryptoContext,gboolean,cstring,ptr.GMimeStream,ptr.GMimeStream,ptr.pointer	proc g_mime_crypto_context_sign(ctx: ptr GMimeCryptoContext; detach: gboolean;\n                           userid: cstring; istream: ptr GMimeStream;\n                           ostream: ptr GMimeStream; err: ptr pointer): cint		100
+nim	g_mime_crypto_context_verify	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_verify,ptr.GMimeCryptoContext,GMimeVerifyFlags,ptr.GMimeStream,ptr.GMimeStream,ptr.GMimeStream,ptr.pointer	proc g_mime_crypto_context_verify(ctx: ptr GMimeCryptoContext;\n                             flags: GMimeVerifyFlags; istream: ptr GMimeStream;\n                             sigstream: ptr GMimeStream;\n                             ostream: ptr GMimeStream; err: ptr pointer): ptr GMimeSignatureList		103
+nim	g_mime_crypto_context_encrypt	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_encrypt,ptr.GMimeCryptoContext,gboolean,cstring,GMimeEncryptFlags,pointer,ptr.GMimeStream,ptr.GMimeStream,ptr.pointer	proc g_mime_crypto_context_encrypt(ctx: ptr GMimeCryptoContext; sign: gboolean;\n                              userid: cstring; flags: GMimeEncryptFlags;\n                              recipients: pointer; istream: ptr GMimeStream;\n                              ostream: ptr GMimeStream; err: ptr pointer): cint		107
+nim	g_mime_crypto_context_decrypt	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_decrypt,ptr.GMimeCryptoContext,GMimeDecryptFlags,cstring,ptr.GMimeStream,ptr.GMimeStream,ptr.pointer	proc g_mime_crypto_context_decrypt(ctx: ptr GMimeCryptoContext;\n                              flags: GMimeDecryptFlags; sessionKey: cstring;\n                              istream: ptr GMimeStream;\n                              ostream: ptr GMimeStream; err: ptr pointer): ptr GMimeDecryptResult		112
+nim	g_mime_crypto_context_import_keys	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_import_keys,ptr.GMimeCryptoContext,ptr.GMimeStream,ptr.pointer	proc g_mime_crypto_context_import_keys(ctx: ptr GMimeCryptoContext;\n                                  istream: ptr GMimeStream; err: ptr pointer): cint		116
+nim	g_mime_crypto_context_export_keys	gmime/bindings/gmime_crypto_context.html#g_mime_crypto_context_export_keys,ptr.GMimeCryptoContext,ptr.cstring,ptr.GMimeStream,ptr.pointer	proc g_mime_crypto_context_export_keys(ctx: ptr GMimeCryptoContext;\n                                  keys: ptr cstring; ostream: ptr GMimeStream;\n                                  err: ptr pointer): cint		117
+nim	g_mime_decrypt_result_get_type	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_get_type	proc g_mime_decrypt_result_get_type(): GType		120
+nim	g_mime_decrypt_result_new	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_new	proc g_mime_decrypt_result_new(): ptr GMimeDecryptResult		121
+nim	g_mime_decrypt_result_set_recipients	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_set_recipients,ptr.GMimeDecryptResult,ptr.GMimeCertificateList	proc g_mime_decrypt_result_set_recipients(result: ptr GMimeDecryptResult;\n                                     recipients: ptr GMimeCertificateList)		123
+nim	g_mime_decrypt_result_get_recipients	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_get_recipients,ptr.GMimeDecryptResult	proc g_mime_decrypt_result_get_recipients(result: ptr GMimeDecryptResult): ptr GMimeCertificateList		124
+nim	g_mime_decrypt_result_set_signatures	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_set_signatures,ptr.GMimeDecryptResult,ptr.GMimeSignatureList	proc g_mime_decrypt_result_set_signatures(result: ptr GMimeDecryptResult;\n                                     signatures: ptr GMimeSignatureList)		126
+nim	g_mime_decrypt_result_get_signatures	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_get_signatures,ptr.GMimeDecryptResult	proc g_mime_decrypt_result_get_signatures(result: ptr GMimeDecryptResult): ptr GMimeSignatureList		127
+nim	g_mime_decrypt_result_set_cipher	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_set_cipher,ptr.GMimeDecryptResult,GMimeCipherAlgo	proc g_mime_decrypt_result_set_cipher(result: ptr GMimeDecryptResult;\n                                 cipher: GMimeCipherAlgo)		129
+nim	g_mime_decrypt_result_get_cipher	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_get_cipher,ptr.GMimeDecryptResult	proc g_mime_decrypt_result_get_cipher(result: ptr GMimeDecryptResult): GMimeCipherAlgo		130
+nim	g_mime_decrypt_result_set_mdc	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_set_mdc,ptr.GMimeDecryptResult,GMimeDigestAlgo	proc g_mime_decrypt_result_set_mdc(result: ptr GMimeDecryptResult;\n                              mdc: GMimeDigestAlgo)		132
+nim	g_mime_decrypt_result_get_mdc	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_get_mdc,ptr.GMimeDecryptResult	proc g_mime_decrypt_result_get_mdc(result: ptr GMimeDecryptResult): GMimeDigestAlgo		133
+nim	g_mime_decrypt_result_set_session_key	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_set_session_key,ptr.GMimeDecryptResult,cstring	proc g_mime_decrypt_result_set_session_key(result: ptr GMimeDecryptResult;\n                                      sessionKey: cstring)		135
+nim	g_mime_decrypt_result_get_session_key	gmime/bindings/gmime_crypto_context.html#g_mime_decrypt_result_get_session_key,ptr.GMimeDecryptResult	proc g_mime_decrypt_result_get_session_key(result: ptr GMimeDecryptResult): cstring		136

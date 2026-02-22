@@ -1,0 +1,5 @@
+nimTitle	gmime_common	gmime/bindings/gmime_common.html	module gmime/bindings/gmime_common		0
+nim	g_mime_read_random_pool	gmime/bindings/gmime_common.html#g_mime_read_random_pool,ptr.uint8,csize_t	proc g_mime_read_random_pool(buffer: ptr uint8; bytes: csize_t)		10
+nim	g_mime_strcase_equal	gmime/bindings/gmime_common.html#g_mime_strcase_equal,gconstpointer,gconstpointer	proc g_mime_strcase_equal(v: gconstpointer; v2: gconstpointer): cint		11
+nim	g_mime_strcase_hash	gmime/bindings/gmime_common.html#g_mime_strcase_hash,gconstpointer	proc g_mime_strcase_hash(key: gconstpointer): guint		12
+nim	g_mime_strdup_trim	gmime/bindings/gmime_common.html#g_mime_strdup_trim,cstring	proc g_mime_strdup_trim(str: cstring): cstring		13

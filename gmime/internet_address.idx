@@ -1,0 +1,2 @@
+nimTitle	internet_address	gmime/internet_address.html	module gmime/internet_address		0
+nim	`$`	gmime/internet_address.html#$,ptr.InternetAddress	proc `$`(address: ptr InternetAddress): string		9

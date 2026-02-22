@@ -1,0 +1,35 @@
+nimTitle	gmime_message	gmime/bindings/gmime_message.html	module gmime/bindings/gmime_message		0
+nim	GMIME_ADDRESS_TYPE_SENDER	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_SENDER	GMimeAddressType.GMIME_ADDRESS_TYPE_SENDER		18
+nim	GMIME_ADDRESS_TYPE_FROM	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_FROM	GMimeAddressType.GMIME_ADDRESS_TYPE_FROM		18
+nim	GMIME_ADDRESS_TYPE_REPLY_TO	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_REPLY_TO	GMimeAddressType.GMIME_ADDRESS_TYPE_REPLY_TO		18
+nim	GMIME_ADDRESS_TYPE_TO	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_TO	GMimeAddressType.GMIME_ADDRESS_TYPE_TO		18
+nim	GMIME_ADDRESS_TYPE_CC	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_CC	GMimeAddressType.GMIME_ADDRESS_TYPE_CC		18
+nim	GMIME_ADDRESS_TYPE_BCC	gmime/bindings/gmime_message.html#GMIME_ADDRESS_TYPE_BCC	GMimeAddressType.GMIME_ADDRESS_TYPE_BCC		18
+nim	GMimeAddressType	gmime/bindings/gmime_message.html#GMimeAddressType	enum GMimeAddressType		18
+nim	GMimeMessage	gmime/bindings/gmime_message.html#GMimeMessage	object GMimeMessage		28
+nim	GMimeMessageClass	gmime/bindings/gmime_message.html#GMimeMessageClass	object GMimeMessageClass		37
+nim	GMimeObjectForeachFunc	gmime/bindings/gmime_message.html#GMimeObjectForeachFunc	type GMimeObjectForeachFunc		40
+nim	g_mime_message_get_type	gmime/bindings/gmime_message.html#g_mime_message_get_type	proc g_mime_message_get_type(): GType		44
+nim	g_mime_message_new	gmime/bindings/gmime_message.html#g_mime_message_new,gboolean	proc g_mime_message_new(pretty_headers: gboolean): ptr GMimeMessage		45
+nim	g_mime_message_get_from	gmime/bindings/gmime_message.html#g_mime_message_get_from,ptr.GMimeMessage	proc g_mime_message_get_from(message: ptr GMimeMessage): ptr InternetAddressList		46
+nim	g_mime_message_get_sender	gmime/bindings/gmime_message.html#g_mime_message_get_sender,ptr.GMimeMessage	proc g_mime_message_get_sender(message: ptr GMimeMessage): ptr InternetAddressList		47
+nim	g_mime_message_get_reply_to	gmime/bindings/gmime_message.html#g_mime_message_get_reply_to,ptr.GMimeMessage	proc g_mime_message_get_reply_to(message: ptr GMimeMessage): ptr InternetAddressList		48
+nim	g_mime_message_get_to	gmime/bindings/gmime_message.html#g_mime_message_get_to,ptr.GMimeMessage	proc g_mime_message_get_to(message: ptr GMimeMessage): ptr InternetAddressList		49
+nim	g_mime_message_get_cc	gmime/bindings/gmime_message.html#g_mime_message_get_cc,ptr.GMimeMessage	proc g_mime_message_get_cc(message: ptr GMimeMessage): ptr InternetAddressList		50
+nim	g_mime_message_get_bcc	gmime/bindings/gmime_message.html#g_mime_message_get_bcc,ptr.GMimeMessage	proc g_mime_message_get_bcc(message: ptr GMimeMessage): ptr InternetAddressList		51
+nim	g_mime_message_add_mailbox	gmime/bindings/gmime_message.html#g_mime_message_add_mailbox,ptr.GMimeMessage,GMimeAddressType,cstring,cstring	proc g_mime_message_add_mailbox(message: ptr GMimeMessage; typ: GMimeAddressType;\n                           name: cstring; addr: cstring)		52
+nim	g_mime_message_get_addresses	gmime/bindings/gmime_message.html#g_mime_message_get_addresses,ptr.GMimeMessage,GMimeAddressType	proc g_mime_message_get_addresses(message: ptr GMimeMessage; typ: GMimeAddressType): ptr InternetAddressList		53
+nim	g_mime_message_get_all_recipients	gmime/bindings/gmime_message.html#g_mime_message_get_all_recipients,ptr.GMimeMessage	proc g_mime_message_get_all_recipients(message: ptr GMimeMessage): ptr InternetAddressList		54
+nim	g_mime_message_set_subject	gmime/bindings/gmime_message.html#g_mime_message_set_subject,ptr.GMimeMessage,cstring,cstring	proc g_mime_message_set_subject(message: ptr GMimeMessage; subject: cstring;\n                           charset: cstring)		55
+nim	g_mime_message_get_subject	gmime/bindings/gmime_message.html#g_mime_message_get_subject,ptr.GMimeMessage	proc g_mime_message_get_subject(message: ptr GMimeMessage): cstring		56
+nim	g_mime_message_set_date	gmime/bindings/gmime_message.html#g_mime_message_set_date,ptr.GMimeMessage,ptr.GDateTime	proc g_mime_message_set_date(message: ptr GMimeMessage; date: ptr GDateTime)		57
+nim	g_mime_message_get_date	gmime/bindings/gmime_message.html#g_mime_message_get_date,ptr.GMimeMessage	proc g_mime_message_get_date(message: ptr GMimeMessage): ptr GDateTime		58
+nim	g_mime_message_set_message_id	gmime/bindings/gmime_message.html#g_mime_message_set_message_id,ptr.GMimeMessage,cstring	proc g_mime_message_set_message_id(message: ptr GMimeMessage; message_id: cstring)		59
+nim	g_mime_message_get_message_id	gmime/bindings/gmime_message.html#g_mime_message_get_message_id,ptr.GMimeMessage	proc g_mime_message_get_message_id(message: ptr GMimeMessage): cstring		60
+nim	g_mime_message_get_mime_part	gmime/bindings/gmime_message.html#g_mime_message_get_mime_part,ptr.GMimeMessage	proc g_mime_message_get_mime_part(message: ptr GMimeMessage): ptr GMimeObject		61
+nim	g_mime_message_set_mime_part	gmime/bindings/gmime_message.html#g_mime_message_set_mime_part,ptr.GMimeMessage,ptr.GMimeObject	proc g_mime_message_set_mime_part(message: ptr GMimeMessage;\n                             mime_part: ptr GMimeObject)		62
+nim	g_mime_message_get_autocrypt_header	gmime/bindings/gmime_message.html#g_mime_message_get_autocrypt_header,ptr.GMimeMessage,ptr.GDateTime	proc g_mime_message_get_autocrypt_header(message: ptr GMimeMessage;\n                                    now: ptr GDateTime): ptr GMimeAutocryptHeader		63
+nim	g_mime_message_get_autocrypt_gossip_headers	gmime/bindings/gmime_message.html#g_mime_message_get_autocrypt_gossip_headers,ptr.GMimeMessage,ptr.GDateTime,GMimeDecryptFlags,cstring,ptr.ptr.GError	proc g_mime_message_get_autocrypt_gossip_headers(message: ptr GMimeMessage;\n    now: ptr GDateTime; flags: GMimeDecryptFlags; session_key: cstring;\n    err: ptr ptr GError): ptr GMimeAutocryptHeaderList		64
+nim	g_mime_message_get_autocrypt_gossip_headers_from_inner_part	gmime/bindings/gmime_message.html#g_mime_message_get_autocrypt_gossip_headers_from_inner_part,ptr.GMimeMessage,ptr.GDateTime,ptr.GMimeObject	proc g_mime_message_get_autocrypt_gossip_headers_from_inner_part(\n    message: ptr GMimeMessage; now: ptr GDateTime; inner_part: ptr GMimeObject): ptr GMimeAutocryptHeaderList		65
+nim	g_mime_message_foreach	gmime/bindings/gmime_message.html#g_mime_message_foreach,ptr.GMimeMessage,GMimeObjectForeachFunc,pointer	proc g_mime_message_foreach(message: ptr GMimeMessage;\n                       callback: GMimeObjectForeachFunc; user_data: pointer)		67
+nim	g_mime_message_get_body	gmime/bindings/gmime_message.html#g_mime_message_get_body,ptr.GMimeMessage	proc g_mime_message_get_body(message: ptr GMimeMessage): ptr GMimeObject		68

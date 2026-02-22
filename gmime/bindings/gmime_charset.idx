@@ -1,0 +1,17 @@
+nimTitle	gmime_charset	gmime/bindings/gmime_charset.html	module gmime/bindings/gmime_charset		0
+nim	GMimeCharset	gmime/bindings/gmime_charset.html#GMimeCharset	object GMimeCharset		10
+nim	g_mime_charset_map_init	gmime/bindings/gmime_charset.html#g_mime_charset_map_init	proc g_mime_charset_map_init()		16
+nim	g_mime_charset_map_shutdown	gmime/bindings/gmime_charset.html#g_mime_charset_map_shutdown	proc g_mime_charset_map_shutdown()		17
+nim	g_mime_locale_charset	gmime/bindings/gmime_charset.html#g_mime_locale_charset	proc g_mime_locale_charset(): cstring		19
+nim	g_mime_locale_language	gmime/bindings/gmime_charset.html#g_mime_locale_language	proc g_mime_locale_language(): cstring		20
+nim	g_mime_charset_language	gmime/bindings/gmime_charset.html#g_mime_charset_language,cstring	proc g_mime_charset_language(charset: cstring): cstring		22
+nim	g_mime_charset_canon_name	gmime/bindings/gmime_charset.html#g_mime_charset_canon_name,cstring	proc g_mime_charset_canon_name(charset: cstring): cstring		23
+nim	g_mime_charset_iconv_name	gmime/bindings/gmime_charset.html#g_mime_charset_iconv_name,cstring	proc g_mime_charset_iconv_name(charset: cstring): cstring		24
+nim	g_mime_charset_name	gmime/bindings/gmime_charset.html#g_mime_charset_name,cstring	proc g_mime_charset_name(charset: cstring): cstring		27
+nim	g_mime_charset_locale_name	gmime/bindings/gmime_charset.html#g_mime_charset_locale_name	proc g_mime_charset_locale_name(): cstring		28
+nim	g_mime_charset_iso_to_windows	gmime/bindings/gmime_charset.html#g_mime_charset_iso_to_windows,cstring	proc g_mime_charset_iso_to_windows(isocharset: cstring): cstring		30
+nim	g_mime_charset_init	gmime/bindings/gmime_charset.html#g_mime_charset_init,ptr.GMimeCharset	proc g_mime_charset_init(charset: ptr GMimeCharset)		32
+nim	g_mime_charset_step	gmime/bindings/gmime_charset.html#g_mime_charset_step,ptr.GMimeCharset,cstring,csize_t	proc g_mime_charset_step(charset: ptr GMimeCharset; inbuf: cstring; inlen: csize_t)		33
+nim	g_mime_charset_best_name	gmime/bindings/gmime_charset.html#g_mime_charset_best_name,ptr.GMimeCharset	proc g_mime_charset_best_name(charset: ptr GMimeCharset): cstring		34
+nim	g_mime_charset_best	gmime/bindings/gmime_charset.html#g_mime_charset_best,cstring,csize_t	proc g_mime_charset_best(inbuf: cstring; inlen: csize_t): cstring		36
+nim	g_mime_charset_can_encode	gmime/bindings/gmime_charset.html#g_mime_charset_can_encode,ptr.GMimeCharset,cstring,cstring,csize_t	proc g_mime_charset_can_encode(mask: ptr GMimeCharset; charset: cstring;\n                          text: cstring; len: csize_t): gboolean		38

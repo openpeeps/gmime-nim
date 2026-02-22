@@ -1,0 +1,11 @@
+nimTitle	gmime_errors	gmime/bindings/gmime_errors.html	module gmime/bindings/gmime_errors		0
+nim	gmime_error_quark	gmime/bindings/gmime_errors.html#gmime_error_quark	var gmime_error_quark		10
+nim	gmime_gpgme_error_quark	gmime/bindings/gmime_errors.html#gmime_gpgme_error_quark	var gmime_gpgme_error_quark		11
+nim	GMIME_ERROR	gmime/bindings/gmime_errors.html#GMIME_ERROR.t	template GMIME_ERROR(): untyped		13
+nim	GMIME_GPGME_ERROR	gmime/bindings/gmime_errors.html#GMIME_GPGME_ERROR.t	template GMIME_GPGME_ERROR(): untyped		14
+nim	GMIME_ERROR_GENERAL	gmime/bindings/gmime_errors.html#GMIME_ERROR_GENERAL	const GMIME_ERROR_GENERAL		18
+nim	GMIME_ERROR_NOT_SUPPORTED	gmime/bindings/gmime_errors.html#GMIME_ERROR_NOT_SUPPORTED	const GMIME_ERROR_NOT_SUPPORTED		19
+nim	GMIME_ERROR_INVALID_OPERATION	gmime/bindings/gmime_errors.html#GMIME_ERROR_INVALID_OPERATION	const GMIME_ERROR_INVALID_OPERATION		20
+nim	GMIME_ERROR_PARSE_ERROR	gmime/bindings/gmime_errors.html#GMIME_ERROR_PARSE_ERROR	const GMIME_ERROR_PARSE_ERROR		21
+nim	GMIME_ERROR_PROTOCOL_ERROR	gmime/bindings/gmime_errors.html#GMIME_ERROR_PROTOCOL_ERROR	const GMIME_ERROR_PROTOCOL_ERROR		22
+nim	GMIME_ERROR_IS_SYSTEM	gmime/bindings/gmime_errors.html#GMIME_ERROR_IS_SYSTEM,int	proc GMIME_ERROR_IS_SYSTEM(error: int): bool		25

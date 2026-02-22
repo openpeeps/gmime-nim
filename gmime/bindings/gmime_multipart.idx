@@ -1,0 +1,25 @@
+nimTitle	gmime_multipart	gmime/bindings/gmime_multipart.html	module gmime/bindings/gmime_multipart		0
+nim	GMimeMultipart	gmime/bindings/gmime_multipart.html#GMimeMultipart	object GMimeMultipart		13
+nim	GMimeMultipartClass	gmime/bindings/gmime_multipart.html#GMimeMultipartClass	object GMimeMultipartClass		21
+nim	GMimeObjectForeachFunc	gmime/bindings/gmime_multipart.html#GMimeObjectForeachFunc	type GMimeObjectForeachFunc		35
+nim	g_mime_multipart_get_type	gmime/bindings/gmime_multipart.html#g_mime_multipart_get_type	proc g_mime_multipart_get_type(): GType		40
+nim	g_mime_multipart_new	gmime/bindings/gmime_multipart.html#g_mime_multipart_new	proc g_mime_multipart_new(): ptr GMimeMultipart		42
+nim	g_mime_multipart_new_with_subtype	gmime/bindings/gmime_multipart.html#g_mime_multipart_new_with_subtype,cstring	proc g_mime_multipart_new_with_subtype(subtype: cstring): ptr GMimeMultipart		43
+nim	g_mime_multipart_set_prologue	gmime/bindings/gmime_multipart.html#g_mime_multipart_set_prologue,ptr.GMimeMultipart,cstring	proc g_mime_multipart_set_prologue(multipart: ptr GMimeMultipart; prologue: cstring)		45
+nim	g_mime_multipart_get_prologue	gmime/bindings/gmime_multipart.html#g_mime_multipart_get_prologue,ptr.GMimeMultipart	proc g_mime_multipart_get_prologue(multipart: ptr GMimeMultipart): cstring		46
+nim	g_mime_multipart_set_epilogue	gmime/bindings/gmime_multipart.html#g_mime_multipart_set_epilogue,ptr.GMimeMultipart,cstring	proc g_mime_multipart_set_epilogue(multipart: ptr GMimeMultipart; epilogue: cstring)		48
+nim	g_mime_multipart_get_epilogue	gmime/bindings/gmime_multipart.html#g_mime_multipart_get_epilogue,ptr.GMimeMultipart	proc g_mime_multipart_get_epilogue(multipart: ptr GMimeMultipart): cstring		49
+nim	g_mime_multipart_clear	gmime/bindings/gmime_multipart.html#g_mime_multipart_clear,ptr.GMimeMultipart	proc g_mime_multipart_clear(multipart: ptr GMimeMultipart)		51
+nim	g_mime_multipart_add	gmime/bindings/gmime_multipart.html#g_mime_multipart_add,ptr.GMimeMultipart,ptr.GMimeObject	proc g_mime_multipart_add(multipart: ptr GMimeMultipart; part: ptr GMimeObject)		53
+nim	g_mime_multipart_insert	gmime/bindings/gmime_multipart.html#g_mime_multipart_insert,ptr.GMimeMultipart,int,ptr.GMimeObject	proc g_mime_multipart_insert(multipart: ptr GMimeMultipart; index: int;\n                        part: ptr GMimeObject)		54
+nim	g_mime_multipart_remove	gmime/bindings/gmime_multipart.html#g_mime_multipart_remove,ptr.GMimeMultipart,ptr.GMimeObject	proc g_mime_multipart_remove(multipart: ptr GMimeMultipart; part: ptr GMimeObject): gboolean		55
+nim	g_mime_multipart_remove_at	gmime/bindings/gmime_multipart.html#g_mime_multipart_remove_at,ptr.GMimeMultipart,int	proc g_mime_multipart_remove_at(multipart: ptr GMimeMultipart; index: int): ptr GMimeObject		56
+nim	g_mime_multipart_replace	gmime/bindings/gmime_multipart.html#g_mime_multipart_replace,ptr.GMimeMultipart,int,ptr.GMimeObject	proc g_mime_multipart_replace(multipart: ptr GMimeMultipart; index: int;\n                         replacement: ptr GMimeObject): ptr GMimeObject		57
+nim	g_mime_multipart_get_part	gmime/bindings/gmime_multipart.html#g_mime_multipart_get_part,ptr.GMimeMultipart,int	proc g_mime_multipart_get_part(multipart: ptr GMimeMultipart; index: int): ptr GMimeObject		58
+nim	g_mime_multipart_contains	gmime/bindings/gmime_multipart.html#g_mime_multipart_contains,ptr.GMimeMultipart,ptr.GMimeObject	proc g_mime_multipart_contains(multipart: ptr GMimeMultipart; part: ptr GMimeObject): gboolean		60
+nim	g_mime_multipart_index_of	gmime/bindings/gmime_multipart.html#g_mime_multipart_index_of,ptr.GMimeMultipart,ptr.GMimeObject	proc g_mime_multipart_index_of(multipart: ptr GMimeMultipart; part: ptr GMimeObject): int		61
+nim	g_mime_multipart_get_count	gmime/bindings/gmime_multipart.html#g_mime_multipart_get_count,ptr.GMimeMultipart	proc g_mime_multipart_get_count(multipart: ptr GMimeMultipart): int		63
+nim	g_mime_multipart_set_boundary	gmime/bindings/gmime_multipart.html#g_mime_multipart_set_boundary,ptr.GMimeMultipart,cstring	proc g_mime_multipart_set_boundary(multipart: ptr GMimeMultipart; boundary: cstring)		65
+nim	g_mime_multipart_get_boundary	gmime/bindings/gmime_multipart.html#g_mime_multipart_get_boundary,ptr.GMimeMultipart	proc g_mime_multipart_get_boundary(multipart: ptr GMimeMultipart): cstring		66
+nim	g_mime_multipart_foreach	gmime/bindings/gmime_multipart.html#g_mime_multipart_foreach,ptr.GMimeMultipart,GMimeObjectForeachFunc,pointer	proc g_mime_multipart_foreach(multipart: ptr GMimeMultipart;\n                         callback: GMimeObjectForeachFunc; user_data: pointer)		68
+nim	g_mime_multipart_get_subpart_from_content_id	gmime/bindings/gmime_multipart.html#g_mime_multipart_get_subpart_from_content_id,ptr.GMimeMultipart,cstring	proc g_mime_multipart_get_subpart_from_content_id(multipart: ptr GMimeMultipart;\n    content_id: cstring): ptr GMimeObject		70

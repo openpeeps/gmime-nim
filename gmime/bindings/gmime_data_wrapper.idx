@@ -1,0 +1,11 @@
+nimTitle	gmime_data_wrapper	gmime/bindings/gmime_data_wrapper.html	module gmime/bindings/gmime_data_wrapper		0
+nim	GMimeDataWrapper	gmime/bindings/gmime_data_wrapper.html#GMimeDataWrapper	object GMimeDataWrapper		15
+nim	GMimeDataWrapperClass	gmime/bindings/gmime_data_wrapper.html#GMimeDataWrapperClass	object GMimeDataWrapperClass		20
+nim	g_mime_data_wrapper_get_type	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_get_type	proc g_mime_data_wrapper_get_type(): GType		26
+nim	g_mime_data_wrapper_new	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_new	proc g_mime_data_wrapper_new(): ptr GMimeDataWrapper		27
+nim	g_mime_data_wrapper_new_with_stream	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_new_with_stream,ptr.GMimeStream,GMimeContentEncoding	proc g_mime_data_wrapper_new_with_stream(stream: ptr GMimeStream;\n                                    encoding: GMimeContentEncoding): ptr GMimeDataWrapper		28
+nim	g_mime_data_wrapper_set_stream	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_set_stream,ptr.GMimeDataWrapper,ptr.GMimeStream	proc g_mime_data_wrapper_set_stream(wrapper: ptr GMimeDataWrapper;\n                               stream: ptr GMimeStream)		30
+nim	g_mime_data_wrapper_get_stream	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_get_stream,ptr.GMimeDataWrapper	proc g_mime_data_wrapper_get_stream(wrapper: ptr GMimeDataWrapper): ptr GMimeStream		31
+nim	g_mime_data_wrapper_set_encoding	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_set_encoding,ptr.GMimeDataWrapper,GMimeContentEncoding	proc g_mime_data_wrapper_set_encoding(wrapper: ptr GMimeDataWrapper;\n                                 encoding: GMimeContentEncoding)		33
+nim	g_mime_data_wrapper_get_encoding	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_get_encoding,ptr.GMimeDataWrapper	proc g_mime_data_wrapper_get_encoding(wrapper: ptr GMimeDataWrapper): GMimeContentEncoding		34
+nim	g_mime_data_wrapper_write_to_stream	gmime/bindings/gmime_data_wrapper.html#g_mime_data_wrapper_write_to_stream,ptr.GMimeDataWrapper,ptr.GMimeStream	proc g_mime_data_wrapper_write_to_stream(wrapper: ptr GMimeDataWrapper;\n                                    stream: ptr GMimeStream): ssize_t		36

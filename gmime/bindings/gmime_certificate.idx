@@ -1,0 +1,89 @@
+nimTitle	gmime_certificate	gmime/bindings/gmime_certificate.html	module gmime/bindings/gmime_certificate		0
+nim	digestAlgoDefault	gmime/bindings/gmime_certificate.html#digestAlgoDefault	GMimeDigestAlgo.digestAlgoDefault		10
+nim	digestAlgoMD5	gmime/bindings/gmime_certificate.html#digestAlgoMD5	GMimeDigestAlgo.digestAlgoMD5		10
+nim	digestAlgoSHA1	gmime/bindings/gmime_certificate.html#digestAlgoSHA1	GMimeDigestAlgo.digestAlgoSHA1		10
+nim	digestAlgoRIPEMD160	gmime/bindings/gmime_certificate.html#digestAlgoRIPEMD160	GMimeDigestAlgo.digestAlgoRIPEMD160		10
+nim	digestAlgoMD2	gmime/bindings/gmime_certificate.html#digestAlgoMD2	GMimeDigestAlgo.digestAlgoMD2		10
+nim	digestAlgoTIGER192	gmime/bindings/gmime_certificate.html#digestAlgoTIGER192	GMimeDigestAlgo.digestAlgoTIGER192		10
+nim	digestAlgoHAVAL5160	gmime/bindings/gmime_certificate.html#digestAlgoHAVAL5160	GMimeDigestAlgo.digestAlgoHAVAL5160		10
+nim	digestAlgoSHA256	gmime/bindings/gmime_certificate.html#digestAlgoSHA256	GMimeDigestAlgo.digestAlgoSHA256		10
+nim	digestAlgoSHA384	gmime/bindings/gmime_certificate.html#digestAlgoSHA384	GMimeDigestAlgo.digestAlgoSHA384		10
+nim	digestAlgoSHA512	gmime/bindings/gmime_certificate.html#digestAlgoSHA512	GMimeDigestAlgo.digestAlgoSHA512		10
+nim	digestAlgoSHA224	gmime/bindings/gmime_certificate.html#digestAlgoSHA224	GMimeDigestAlgo.digestAlgoSHA224		10
+nim	digestAlgoMD4	gmime/bindings/gmime_certificate.html#digestAlgoMD4	GMimeDigestAlgo.digestAlgoMD4		10
+nim	digestAlgoCRC32	gmime/bindings/gmime_certificate.html#digestAlgoCRC32	GMimeDigestAlgo.digestAlgoCRC32		10
+nim	digestAlgoCRC32RFC1510	gmime/bindings/gmime_certificate.html#digestAlgoCRC32RFC1510	GMimeDigestAlgo.digestAlgoCRC32RFC1510		10
+nim	digestAlgoCRC32RFC2440	gmime/bindings/gmime_certificate.html#digestAlgoCRC32RFC2440	GMimeDigestAlgo.digestAlgoCRC32RFC2440		10
+nim	GMimeDigestAlgo	gmime/bindings/gmime_certificate.html#GMimeDigestAlgo	enum GMimeDigestAlgo		10
+nim	pubkeyAlgoDefault	gmime/bindings/gmime_certificate.html#pubkeyAlgoDefault	GMimePubKeyAlgo.pubkeyAlgoDefault		27
+nim	pubkeyAlgoRSA	gmime/bindings/gmime_certificate.html#pubkeyAlgoRSA	GMimePubKeyAlgo.pubkeyAlgoRSA		27
+nim	pubkeyAlgoRSAE	gmime/bindings/gmime_certificate.html#pubkeyAlgoRSAE	GMimePubKeyAlgo.pubkeyAlgoRSAE		27
+nim	pubkeyAlgoRSAS	gmime/bindings/gmime_certificate.html#pubkeyAlgoRSAS	GMimePubKeyAlgo.pubkeyAlgoRSAS		27
+nim	pubkeyAlgoELGE	gmime/bindings/gmime_certificate.html#pubkeyAlgoELGE	GMimePubKeyAlgo.pubkeyAlgoELGE		27
+nim	pubkeyAlgoDSA	gmime/bindings/gmime_certificate.html#pubkeyAlgoDSA	GMimePubKeyAlgo.pubkeyAlgoDSA		27
+nim	pubkeyAlgoECC	gmime/bindings/gmime_certificate.html#pubkeyAlgoECC	GMimePubKeyAlgo.pubkeyAlgoECC		27
+nim	pubkeyAlgoELG	gmime/bindings/gmime_certificate.html#pubkeyAlgoELG	GMimePubKeyAlgo.pubkeyAlgoELG		27
+nim	pubkeyAlgoECDSA	gmime/bindings/gmime_certificate.html#pubkeyAlgoECDSA	GMimePubKeyAlgo.pubkeyAlgoECDSA		27
+nim	pubkeyAlgoECDH	gmime/bindings/gmime_certificate.html#pubkeyAlgoECDH	GMimePubKeyAlgo.pubkeyAlgoECDH		27
+nim	pubkeyAlgoEDDSA	gmime/bindings/gmime_certificate.html#pubkeyAlgoEDDSA	GMimePubKeyAlgo.pubkeyAlgoEDDSA		27
+nim	GMimePubKeyAlgo	gmime/bindings/gmime_certificate.html#GMimePubKeyAlgo	enum GMimePubKeyAlgo		27
+nim	trustUnknown	gmime/bindings/gmime_certificate.html#trustUnknown	GMimeTrust.trustUnknown		40
+nim	trustUndefined	gmime/bindings/gmime_certificate.html#trustUndefined	GMimeTrust.trustUndefined		40
+nim	trustNever	gmime/bindings/gmime_certificate.html#trustNever	GMimeTrust.trustNever		40
+nim	trustMarginal	gmime/bindings/gmime_certificate.html#trustMarginal	GMimeTrust.trustMarginal		40
+nim	trustFull	gmime/bindings/gmime_certificate.html#trustFull	GMimeTrust.trustFull		40
+nim	trustUltimate	gmime/bindings/gmime_certificate.html#trustUltimate	GMimeTrust.trustUltimate		40
+nim	GMimeTrust	gmime/bindings/gmime_certificate.html#GMimeTrust	enum GMimeTrust		40
+nim	validityUnknown	gmime/bindings/gmime_certificate.html#validityUnknown	GMimeValidity.validityUnknown		48
+nim	validityUndefined	gmime/bindings/gmime_certificate.html#validityUndefined	GMimeValidity.validityUndefined		48
+nim	validityNever	gmime/bindings/gmime_certificate.html#validityNever	GMimeValidity.validityNever		48
+nim	validityMarginal	gmime/bindings/gmime_certificate.html#validityMarginal	GMimeValidity.validityMarginal		48
+nim	validityFull	gmime/bindings/gmime_certificate.html#validityFull	GMimeValidity.validityFull		48
+nim	validityUltimate	gmime/bindings/gmime_certificate.html#validityUltimate	GMimeValidity.validityUltimate		48
+nim	GMimeValidity	gmime/bindings/gmime_certificate.html#GMimeValidity	enum GMimeValidity		48
+nim	GMimeCertificate	gmime/bindings/gmime_certificate.html#GMimeCertificate	object GMimeCertificate		56
+nim	GMimeCertificateClass	gmime/bindings/gmime_certificate.html#GMimeCertificateClass	object GMimeCertificateClass		72
+nim	GMimeCertificateList	gmime/bindings/gmime_certificate.html#GMimeCertificateList	object GMimeCertificateList		75
+nim	GMimeCertificateListClass	gmime/bindings/gmime_certificate.html#GMimeCertificateListClass	object GMimeCertificateListClass		79
+nim	g_mime_certificate_get_type	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_type	proc g_mime_certificate_get_type(): GType		84
+nim	g_mime_certificate_new	gmime/bindings/gmime_certificate.html#g_mime_certificate_new	proc g_mime_certificate_new(): ptr GMimeCertificate		85
+nim	g_mime_certificate_set_trust	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_trust,ptr.GMimeCertificate,GMimeTrust	proc g_mime_certificate_set_trust(cert: ptr GMimeCertificate; trust: GMimeTrust)		87
+nim	g_mime_certificate_get_trust	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_trust,ptr.GMimeCertificate	proc g_mime_certificate_get_trust(cert: ptr GMimeCertificate): GMimeTrust		88
+nim	g_mime_certificate_set_pubkey_algo	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_pubkey_algo,ptr.GMimeCertificate,GMimePubKeyAlgo	proc g_mime_certificate_set_pubkey_algo(cert: ptr GMimeCertificate;\n                                   algo: GMimePubKeyAlgo)		90
+nim	g_mime_certificate_get_pubkey_algo	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_pubkey_algo,ptr.GMimeCertificate	proc g_mime_certificate_get_pubkey_algo(cert: ptr GMimeCertificate): GMimePubKeyAlgo		91
+nim	g_mime_certificate_set_digest_algo	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_digest_algo,ptr.GMimeCertificate,GMimeDigestAlgo	proc g_mime_certificate_set_digest_algo(cert: ptr GMimeCertificate;\n                                   algo: GMimeDigestAlgo)		93
+nim	g_mime_certificate_get_digest_algo	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_digest_algo,ptr.GMimeCertificate	proc g_mime_certificate_get_digest_algo(cert: ptr GMimeCertificate): GMimeDigestAlgo		94
+nim	g_mime_certificate_set_issuer_serial	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_issuer_serial,ptr.GMimeCertificate,cstring	proc g_mime_certificate_set_issuer_serial(cert: ptr GMimeCertificate;\n                                     issuerSerial: cstring)		96
+nim	g_mime_certificate_get_issuer_serial	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_issuer_serial,ptr.GMimeCertificate	proc g_mime_certificate_get_issuer_serial(cert: ptr GMimeCertificate): cstring		97
+nim	g_mime_certificate_set_issuer_name	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_issuer_name,ptr.GMimeCertificate,cstring	proc g_mime_certificate_set_issuer_name(cert: ptr GMimeCertificate;\n                                   issuerName: cstring)		99
+nim	g_mime_certificate_get_issuer_name	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_issuer_name,ptr.GMimeCertificate	proc g_mime_certificate_get_issuer_name(cert: ptr GMimeCertificate): cstring		100
+nim	g_mime_certificate_set_fingerprint	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_fingerprint,ptr.GMimeCertificate,cstring	proc g_mime_certificate_set_fingerprint(cert: ptr GMimeCertificate;\n                                   fingerprint: cstring)		102
+nim	g_mime_certificate_get_fingerprint	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_fingerprint,ptr.GMimeCertificate	proc g_mime_certificate_get_fingerprint(cert: ptr GMimeCertificate): cstring		103
+nim	g_mime_certificate_set_key_id	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_key_id,ptr.GMimeCertificate,cstring	proc g_mime_certificate_set_key_id(cert: ptr GMimeCertificate; keyId: cstring)		105
+nim	g_mime_certificate_get_key_id	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_key_id,ptr.GMimeCertificate	proc g_mime_certificate_get_key_id(cert: ptr GMimeCertificate): cstring		106
+nim	g_mime_certificate_set_email	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_email,ptr.GMimeCertificate,cstring	proc g_mime_certificate_set_email(cert: ptr GMimeCertificate; email: cstring)		108
+nim	g_mime_certificate_get_email	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_email,ptr.GMimeCertificate	proc g_mime_certificate_get_email(cert: ptr GMimeCertificate): cstring		109
+nim	g_mime_certificate_set_name	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_name,ptr.GMimeCertificate,cstring	proc g_mime_certificate_set_name(cert: ptr GMimeCertificate; name: cstring)		111
+nim	g_mime_certificate_get_name	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_name,ptr.GMimeCertificate	proc g_mime_certificate_get_name(cert: ptr GMimeCertificate): cstring		112
+nim	g_mime_certificate_set_user_id	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_user_id,ptr.GMimeCertificate,cstring	proc g_mime_certificate_set_user_id(cert: ptr GMimeCertificate; userId: cstring)		114
+nim	g_mime_certificate_get_user_id	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_user_id,ptr.GMimeCertificate	proc g_mime_certificate_get_user_id(cert: ptr GMimeCertificate): cstring		115
+nim	g_mime_certificate_set_id_validity	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_id_validity,ptr.GMimeCertificate,GMimeValidity	proc g_mime_certificate_set_id_validity(cert: ptr GMimeCertificate;\n                                   validity: GMimeValidity)		117
+nim	g_mime_certificate_get_id_validity	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_id_validity,ptr.GMimeCertificate	proc g_mime_certificate_get_id_validity(cert: ptr GMimeCertificate): GMimeValidity		118
+nim	g_mime_certificate_set_created	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_created,ptr.GMimeCertificate,time_t	proc g_mime_certificate_set_created(cert: ptr GMimeCertificate; created: time_t)		120
+nim	g_mime_certificate_get_created	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_created,ptr.GMimeCertificate	proc g_mime_certificate_get_created(cert: ptr GMimeCertificate): time_t		121
+nim	g_mime_certificate_get_created64	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_created64,ptr.GMimeCertificate	proc g_mime_certificate_get_created64(cert: ptr GMimeCertificate): gint64		122
+nim	g_mime_certificate_set_expires	gmime/bindings/gmime_certificate.html#g_mime_certificate_set_expires,ptr.GMimeCertificate,time_t	proc g_mime_certificate_set_expires(cert: ptr GMimeCertificate; expires: time_t)		124
+nim	g_mime_certificate_get_expires	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_expires,ptr.GMimeCertificate	proc g_mime_certificate_get_expires(cert: ptr GMimeCertificate): time_t		125
+nim	g_mime_certificate_get_expires64	gmime/bindings/gmime_certificate.html#g_mime_certificate_get_expires64,ptr.GMimeCertificate	proc g_mime_certificate_get_expires64(cert: ptr GMimeCertificate): gint64		126
+nim	g_mime_certificate_list_get_type	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_get_type	proc g_mime_certificate_list_get_type(): GType		128
+nim	g_mime_certificate_list_new	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_new	proc g_mime_certificate_list_new(): ptr GMimeCertificateList		129
+nim	g_mime_certificate_list_length	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_length,ptr.GMimeCertificateList	proc g_mime_certificate_list_length(list: ptr GMimeCertificateList): cint		130
+nim	g_mime_certificate_list_clear	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_clear,ptr.GMimeCertificateList	proc g_mime_certificate_list_clear(list: ptr GMimeCertificateList)		131
+nim	g_mime_certificate_list_add	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_add,ptr.GMimeCertificateList,ptr.GMimeCertificate	proc g_mime_certificate_list_add(list: ptr GMimeCertificateList;\n                            cert: ptr GMimeCertificate): cint		132
+nim	g_mime_certificate_list_insert	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_insert,ptr.GMimeCertificateList,cint,ptr.GMimeCertificate	proc g_mime_certificate_list_insert(list: ptr GMimeCertificateList; index: cint;\n                               cert: ptr GMimeCertificate)		133
+nim	g_mime_certificate_list_remove	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_remove,ptr.GMimeCertificateList,ptr.GMimeCertificate	proc g_mime_certificate_list_remove(list: ptr GMimeCertificateList;\n                               cert: ptr GMimeCertificate): gboolean		134
+nim	g_mime_certificate_list_remove_at	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_remove_at,ptr.GMimeCertificateList,cint	proc g_mime_certificate_list_remove_at(list: ptr GMimeCertificateList; index: cint): gboolean		135
+nim	g_mime_certificate_list_contains	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_contains,ptr.GMimeCertificateList,ptr.GMimeCertificate	proc g_mime_certificate_list_contains(list: ptr GMimeCertificateList;\n                                 cert: ptr GMimeCertificate): gboolean		136
+nim	g_mime_certificate_list_index_of	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_index_of,ptr.GMimeCertificateList,ptr.GMimeCertificate	proc g_mime_certificate_list_index_of(list: ptr GMimeCertificateList;\n                                 cert: ptr GMimeCertificate): cint		137
+nim	g_mime_certificate_list_get_certificate	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_get_certificate,ptr.GMimeCertificateList,cint	proc g_mime_certificate_list_get_certificate(list: ptr GMimeCertificateList;\n                                        index: cint): ptr GMimeCertificate		138
+nim	g_mime_certificate_list_set_certificate	gmime/bindings/gmime_certificate.html#g_mime_certificate_list_set_certificate,ptr.GMimeCertificateList,cint,ptr.GMimeCertificate	proc g_mime_certificate_list_set_certificate(list: ptr GMimeCertificateList;\n                                        index: cint; cert: ptr GMimeCertificate)		139

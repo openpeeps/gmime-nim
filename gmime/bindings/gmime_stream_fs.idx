@@ -1,0 +1,12 @@
+nimTitle	gmime_stream_fs	gmime/bindings/gmime_stream_fs.html	module gmime/bindings/gmime_stream_fs		0
+nim	GMimeStreamFs	gmime/bindings/gmime_stream_fs.html#GMimeStreamFs	object GMimeStreamFs		12
+nim	GMimeStreamFsClass	gmime/bindings/gmime_stream_fs.html#GMimeStreamFsClass	object GMimeStreamFsClass		18
+nim	GMimeReadOnly	gmime/bindings/gmime_stream_fs.html#GMimeReadOnly	const GMimeReadOnly		22
+nim	GMimeWriteOnly	gmime/bindings/gmime_stream_fs.html#GMimeWriteOnly	const GMimeWriteOnly		23
+nim	GMimeReadWrite	gmime/bindings/gmime_stream_fs.html#GMimeReadWrite	const GMimeReadWrite		24
+nim	g_mime_stream_fs_get_type	gmime/bindings/gmime_stream_fs.html#g_mime_stream_fs_get_type	proc g_mime_stream_fs_get_type(): GType		28
+nim	g_mime_stream_fs_new	gmime/bindings/gmime_stream_fs.html#g_mime_stream_fs_new,int	proc g_mime_stream_fs_new(fd: int): ptr GMimeStream		30
+nim	g_mime_stream_fs_new_with_bounds	gmime/bindings/gmime_stream_fs.html#g_mime_stream_fs_new_with_bounds,int,gint64,gint64	proc g_mime_stream_fs_new_with_bounds(fd: int; start: gint64; end: gint64): ptr GMimeStream		31
+nim	g_mime_stream_fs_open	gmime/bindings/gmime_stream_fs.html#g_mime_stream_fs_open,cstring,int,int,ptr.ptr.GError	proc g_mime_stream_fs_open(path: cstring; flags: int; mode: int; err: ptr ptr GError): ptr GMimeStream		33
+nim	g_mime_stream_fs_get_owner	gmime/bindings/gmime_stream_fs.html#g_mime_stream_fs_get_owner,ptr.GMimeStreamFs	proc g_mime_stream_fs_get_owner(stream: ptr GMimeStreamFs): gboolean		35
+nim	g_mime_stream_fs_set_owner	gmime/bindings/gmime_stream_fs.html#g_mime_stream_fs_set_owner,ptr.GMimeStreamFs,gboolean	proc g_mime_stream_fs_set_owner(stream: ptr GMimeStreamFs; owner: gboolean)		36

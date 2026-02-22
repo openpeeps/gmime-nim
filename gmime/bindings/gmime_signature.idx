@@ -1,0 +1,43 @@
+nimTitle	gmime_signature	gmime/bindings/gmime_signature.html	module gmime/bindings/gmime_signature		0
+nim	GMIME_SIGNATURE_STATUS_VALID	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_VALID	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_VALID		12
+nim	GMIME_SIGNATURE_STATUS_GREEN	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_GREEN	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_GREEN		12
+nim	GMIME_SIGNATURE_STATUS_RED	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_RED	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_RED		12
+nim	GMIME_SIGNATURE_STATUS_KEY_REVOKED	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_KEY_REVOKED	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_KEY_REVOKED		12
+nim	GMIME_SIGNATURE_STATUS_KEY_EXPIRED	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_KEY_EXPIRED	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_KEY_EXPIRED		12
+nim	GMIME_SIGNATURE_STATUS_SIG_EXPIRED	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_SIG_EXPIRED	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_SIG_EXPIRED		12
+nim	GMIME_SIGNATURE_STATUS_KEY_MISSING	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_KEY_MISSING	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_KEY_MISSING		12
+nim	GMIME_SIGNATURE_STATUS_CRL_MISSING	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_CRL_MISSING	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_CRL_MISSING		12
+nim	GMIME_SIGNATURE_STATUS_CRL_TOO_OLD	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_CRL_TOO_OLD	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_CRL_TOO_OLD		12
+nim	GMIME_SIGNATURE_STATUS_BAD_POLICY	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_BAD_POLICY	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_BAD_POLICY		12
+nim	GMIME_SIGNATURE_STATUS_SYS_ERROR	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_SYS_ERROR	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_SYS_ERROR		12
+nim	GMIME_SIGNATURE_STATUS_TOFU_CONFLICT	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_TOFU_CONFLICT	GMimeSignatureStatus.GMIME_SIGNATURE_STATUS_TOFU_CONFLICT		12
+nim	GMimeSignatureStatus	gmime/bindings/gmime_signature.html#GMimeSignatureStatus	enum GMimeSignatureStatus		12
+nim	GMIME_SIGNATURE_STATUS_ERROR_MASK	gmime/bindings/gmime_signature.html#GMIME_SIGNATURE_STATUS_ERROR_MASK	const GMIME_SIGNATURE_STATUS_ERROR_MASK		27
+nim	GMimeSignature	gmime/bindings/gmime_signature.html#GMimeSignature	object GMimeSignature		34
+nim	GMimeSignatureClass	gmime/bindings/gmime_signature.html#GMimeSignatureClass	object GMimeSignatureClass		41
+nim	GMimeSignatureList	gmime/bindings/gmime_signature.html#GMimeSignatureList	object GMimeSignatureList		44
+nim	GMimeSignatureListClass	gmime/bindings/gmime_signature.html#GMimeSignatureListClass	object GMimeSignatureListClass		48
+nim	g_mime_signature_get_type	gmime/bindings/gmime_signature.html#g_mime_signature_get_type	proc g_mime_signature_get_type(): GType		53
+nim	g_mime_signature_new	gmime/bindings/gmime_signature.html#g_mime_signature_new	proc g_mime_signature_new(): ptr GMimeSignature		55
+nim	g_mime_signature_set_certificate	gmime/bindings/gmime_signature.html#g_mime_signature_set_certificate,ptr.GMimeSignature,ptr.GMimeCertificate	proc g_mime_signature_set_certificate(sig: ptr GMimeSignature;\n                                 cert: ptr GMimeCertificate)		57
+nim	g_mime_signature_get_certificate	gmime/bindings/gmime_signature.html#g_mime_signature_get_certificate,ptr.GMimeSignature	proc g_mime_signature_get_certificate(sig: ptr GMimeSignature): ptr GMimeCertificate		58
+nim	g_mime_signature_set_status	gmime/bindings/gmime_signature.html#g_mime_signature_set_status,ptr.GMimeSignature,GMimeSignatureStatus	proc g_mime_signature_set_status(sig: ptr GMimeSignature;\n                            status: GMimeSignatureStatus)		60
+nim	g_mime_signature_get_status	gmime/bindings/gmime_signature.html#g_mime_signature_get_status,ptr.GMimeSignature	proc g_mime_signature_get_status(sig: ptr GMimeSignature): GMimeSignatureStatus		61
+nim	g_mime_signature_set_created	gmime/bindings/gmime_signature.html#g_mime_signature_set_created,ptr.GMimeSignature,time_t	proc g_mime_signature_set_created(sig: ptr GMimeSignature; created: time_t)		63
+nim	g_mime_signature_get_created	gmime/bindings/gmime_signature.html#g_mime_signature_get_created,ptr.GMimeSignature	proc g_mime_signature_get_created(sig: ptr GMimeSignature): time_t		64
+nim	g_mime_signature_get_created64	gmime/bindings/gmime_signature.html#g_mime_signature_get_created64,ptr.GMimeSignature	proc g_mime_signature_get_created64(sig: ptr GMimeSignature): gint64		65
+nim	g_mime_signature_set_expires	gmime/bindings/gmime_signature.html#g_mime_signature_set_expires,ptr.GMimeSignature,time_t	proc g_mime_signature_set_expires(sig: ptr GMimeSignature; expires: time_t)		67
+nim	g_mime_signature_get_expires	gmime/bindings/gmime_signature.html#g_mime_signature_get_expires,ptr.GMimeSignature	proc g_mime_signature_get_expires(sig: ptr GMimeSignature): time_t		68
+nim	g_mime_signature_get_expires64	gmime/bindings/gmime_signature.html#g_mime_signature_get_expires64,ptr.GMimeSignature	proc g_mime_signature_get_expires64(sig: ptr GMimeSignature): gint64		69
+nim	g_mime_signature_list_get_type	gmime/bindings/gmime_signature.html#g_mime_signature_list_get_type	proc g_mime_signature_list_get_type(): GType		71
+nim	g_mime_signature_list_new	gmime/bindings/gmime_signature.html#g_mime_signature_list_new	proc g_mime_signature_list_new(): ptr GMimeSignatureList		73
+nim	g_mime_signature_list_length	gmime/bindings/gmime_signature.html#g_mime_signature_list_length,ptr.GMimeSignatureList	proc g_mime_signature_list_length(list: ptr GMimeSignatureList): int		75
+nim	g_mime_signature_list_clear	gmime/bindings/gmime_signature.html#g_mime_signature_list_clear,ptr.GMimeSignatureList	proc g_mime_signature_list_clear(list: ptr GMimeSignatureList)		77
+nim	g_mime_signature_list_add	gmime/bindings/gmime_signature.html#g_mime_signature_list_add,ptr.GMimeSignatureList,ptr.GMimeSignature	proc g_mime_signature_list_add(list: ptr GMimeSignatureList; sig: ptr GMimeSignature): int		79
+nim	g_mime_signature_list_insert	gmime/bindings/gmime_signature.html#g_mime_signature_list_insert,ptr.GMimeSignatureList,int,ptr.GMimeSignature	proc g_mime_signature_list_insert(list: ptr GMimeSignatureList; index: int;\n                             sig: ptr GMimeSignature)		80
+nim	g_mime_signature_list_remove	gmime/bindings/gmime_signature.html#g_mime_signature_list_remove,ptr.GMimeSignatureList,ptr.GMimeSignature	proc g_mime_signature_list_remove(list: ptr GMimeSignatureList;\n                             sig: ptr GMimeSignature): gboolean		81
+nim	g_mime_signature_list_remove_at	gmime/bindings/gmime_signature.html#g_mime_signature_list_remove_at,ptr.GMimeSignatureList,int	proc g_mime_signature_list_remove_at(list: ptr GMimeSignatureList; index: int): gboolean		82
+nim	g_mime_signature_list_contains	gmime/bindings/gmime_signature.html#g_mime_signature_list_contains,ptr.GMimeSignatureList,ptr.GMimeSignature	proc g_mime_signature_list_contains(list: ptr GMimeSignatureList;\n                               sig: ptr GMimeSignature): gboolean		84
+nim	g_mime_signature_list_index_of	gmime/bindings/gmime_signature.html#g_mime_signature_list_index_of,ptr.GMimeSignatureList,ptr.GMimeSignature	proc g_mime_signature_list_index_of(list: ptr GMimeSignatureList;\n                               sig: ptr GMimeSignature): int		85
+nim	g_mime_signature_list_get_signature	gmime/bindings/gmime_signature.html#g_mime_signature_list_get_signature,ptr.GMimeSignatureList,int	proc g_mime_signature_list_get_signature(list: ptr GMimeSignatureList; index: int): ptr GMimeSignature		87
+nim	g_mime_signature_list_set_signature	gmime/bindings/gmime_signature.html#g_mime_signature_list_set_signature,ptr.GMimeSignatureList,int,ptr.GMimeSignature	proc g_mime_signature_list_set_signature(list: ptr GMimeSignatureList; index: int;\n                                    sig: ptr GMimeSignature)		88
