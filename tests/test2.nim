@@ -20,6 +20,8 @@ test "api - parse mime_simple.eml":
   let dt = parse("Fri, 21 May 1996 09:55:06 -0700", f = "ddd, dd MMM yyyy HH:mm:ss ZZZ")
   assert message.getDateTime().get() == dt
 
+  assert message.getBody(plainTextOnly = true) == "Something else"
+
   parser.close()
 
 g_mime_shutdown()
